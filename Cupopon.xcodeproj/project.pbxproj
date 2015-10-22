@@ -14,6 +14,7 @@
 		BA75B1131BC669A400A1F5D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA75B1111BC669A400A1F5D6 /* LaunchScreen.storyboard */; };
 		BA75B11E1BC669A400A1F5D6 /* CupoponTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75B11D1BC669A400A1F5D6 /* CupoponTests.swift */; };
 		BA75B1291BC669A400A1F5D6 /* CupoponUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75B1281BC669A400A1F5D6 /* CupoponUITests.swift */; };
+		BAA342041BD902FC00052EA2 /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA342031BD902FC00052EA2 /* RegistroViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		BA75B1241BC669A400A1F5D6 /* CupoponUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CupoponUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA75B1281BC669A400A1F5D6 /* CupoponUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupoponUITests.swift; sourceTree = "<group>"; };
 		BA75B12A1BC669A400A1F5D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAA342031BD902FC00052EA2 /* RegistroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				BA75B10F1BC669A400A1F5D6 /* Assets.xcassets */,
 				BA75B1111BC669A400A1F5D6 /* LaunchScreen.storyboard */,
 				BA75B1141BC669A400A1F5D6 /* Info.plist */,
+				BAA342031BD902FC00052EA2 /* RegistroViewController.swift */,
 			);
 			path = Cupopon;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA75B10B1BC669A400A1F5D6 /* ViewController.swift in Sources */,
+				BAA342041BD902FC00052EA2 /* RegistroViewController.swift in Sources */,
 				BA75B1091BC669A400A1F5D6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +401,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Cupopon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iweb2015.Cupopon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -408,6 +413,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Cupopon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iweb2015.Cupopon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -481,6 +487,7 @@
 				BA75B12F1BC669A400A1F5D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA75B1301BC669A400A1F5D6 /* Build configuration list for PBXNativeTarget "CupoponTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +496,7 @@
 				BA75B1321BC669A400A1F5D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA75B1331BC669A400A1F5D6 /* Build configuration list for PBXNativeTarget "CupoponUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +505,7 @@
 				BA75B1351BC669A400A1F5D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
