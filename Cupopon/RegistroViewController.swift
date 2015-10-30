@@ -53,8 +53,8 @@ class RegistroViewController: UIViewController {
             return
         }
         
-        if(userDni.isEmpty || userApellido.isEmpty || userNombre.isEmpty
-            || userEmail.isEmpty || userPassword.isEmpty ){
+        if(userDni!.isEmpty || userApellido!.isEmpty || userNombre!.isEmpty
+            || userEmail!.isEmpty || userPassword!.isEmpty ){
                 desplegarAlertaMensaje("Todos los campos para completar son requeridos")
                 return
         }
@@ -69,19 +69,42 @@ class RegistroViewController: UIViewController {
         
         request.HTTPMethod = "POST";
         
-        let postString = "dniUser=\(userDni)&apellidosUser=\(userApellido)&nombreUser=\(userNombre)&emailUser=\(userEmail)&passwordUser=\(userPassword)";
+        let postString = "dniUser=\(userDni!)&apellidosUser=\(userApellido!)&nombreUser=\(userNombre!)&emailUser=\(userEmail!)&passwordUser=\(userPassword!)";
         //encodificacion del cuerpo de la peticion
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding);
         
         // clase de una api que permite descargar contendi via http,
         // shared .. returna un objeto sesion singleton s
         // data.. crea una peticion basada en la especifia url reques
-        NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data:NSData?, response : NSURLResponse?, error : NSError!) -> Void in
+        NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data: NSData?, response : NSURLResponse?, error : NSError?) -> Void in
             
-            //dispatch_as
-            
+            // lanzar la ejecucion de un bloque en dicha cola en segudno plano
+            dispatch_async(dispatch_get_main_queue()){
+                if error != nil {
+                    self.desplegarAlertaMensaje(error!.localizedDescription)
+                    return
+                }
+                
+                //var err : NSError?
+                
+                var json = NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary
+                if let parseJson = json{
+                    var userId = parseJson["usuarioId"] as? String
+                    if (userId != nil)
+                    {
+                        var myAlerta = UIAlertController(title: "Alerta", message: "Registro Exitoso", preferredStyle: UIAlertControllerStyle.Alert);
+                        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default){
+                            (action) in self.dismissViewControllerAnimated(true, completion: nil)
+                        }
+                        myAlerta.addAction(okAction);
+                        self.presentViewController(myAlerta, animated : true, completion:nil)
+                        
+                    }
+                }
+            }
         
         }).resume()
+        
         
     }
     func desplegarAlertaMensaje(userMensaje : String){
