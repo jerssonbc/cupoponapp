@@ -75,7 +75,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre:" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="qlm-xv-JeS">
-                                <rect key="frame" x="20" y="166" width="280" height="30"/>
+                                <rect key="frame" x="20" y="163" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -89,11 +89,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repetir Password:" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ImI-pS-HFg">
-                                <rect key="frame" x="20" y="287" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Preferencia de Cupones:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3X-B5-k5S">
                                 <rect key="frame" x="20" y="344" width="202" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -101,11 +96,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcA-HM-txS">
-                                <rect key="frame" x="118" y="429" width="84" height="30"/>
+                                <rect key="frame" x="118" y="428" width="84" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Registrar"/>
+                                <connections>
+                                    <action selector="registrarButtonTapped:" destination="s0a-Yy-sCo" eventType="touchUpInside" id="Cwo-OS-qie"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repetir Password:" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ImI-pS-HFg">
+                                <rect key="frame" x="20" y="286" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -117,6 +120,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="userApellidosTextField" destination="DRf-lB-7Fj" id="vlt-ob-hiR"/>
+                        <outlet property="userDniTextField" destination="DRf-lB-7Fj" id="oET-6a-rqs"/>
+                        <outlet property="userEmailTextField" destination="DRf-lB-7Fj" id="VQ0-pv-7xR"/>
+                        <outlet property="userNombreTextField" destination="DRf-lB-7Fj" id="kJs-dr-xJd"/>
+                        <outlet property="userPasswordRepeatTextField" destination="DRf-lB-7Fj" id="YXk-wg-OeC"/>
+                        <outlet property="userPasswordTextField" destination="DRf-lB-7Fj" id="B9w-sG-ZTb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qBL-PM-ViY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
