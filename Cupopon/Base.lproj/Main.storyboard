@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uHN-i5-7aA">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
@@ -64,11 +63,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DNI:" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="m57-kw-cza">
-                                <rect key="frame" x="20" y="87" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellidos:" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Op5-7f-RLs">
                                 <rect key="frame" x="20" y="125" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -87,7 +81,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password:" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="7Gl-26-nfo">
                                 <rect key="frame" x="20" y="248" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Preferencia de Cupones:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3X-B5-k5S">
                                 <rect key="frame" x="20" y="344" width="202" height="21"/>
@@ -107,7 +101,13 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repetir Password:" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ImI-pS-HFg">
                                 <rect key="frame" x="20" y="286" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DNI:" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="m57-kw-cza">
+                                <rect key="frame" x="20" y="87" width="280" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -121,12 +121,12 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="userApellidosTextField" destination="DRf-lB-7Fj" id="vlt-ob-hiR"/>
-                        <outlet property="userDniTextField" destination="DRf-lB-7Fj" id="oET-6a-rqs"/>
-                        <outlet property="userEmailTextField" destination="DRf-lB-7Fj" id="VQ0-pv-7xR"/>
-                        <outlet property="userNombreTextField" destination="DRf-lB-7Fj" id="kJs-dr-xJd"/>
-                        <outlet property="userPasswordRepeatTextField" destination="DRf-lB-7Fj" id="YXk-wg-OeC"/>
-                        <outlet property="userPasswordTextField" destination="DRf-lB-7Fj" id="B9w-sG-ZTb"/>
+                        <outlet property="userApellidosTextField" destination="Op5-7f-RLs" id="1hU-KK-ERa"/>
+                        <outlet property="userDniTextField" destination="m57-kw-cza" id="meY-2Q-ozy"/>
+                        <outlet property="userEmailTextField" destination="Way-Fa-hEM" id="2bq-Wi-XWA"/>
+                        <outlet property="userNombreTextField" destination="qlm-xv-JeS" id="LtT-bd-Iob"/>
+                        <outlet property="userPasswordRepeatTextField" destination="ImI-pS-HFg" id="ZHF-UD-PZI"/>
+                        <outlet property="userPasswordTextField" destination="7Gl-26-nfo" id="BaN-Ir-wJe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qBL-PM-ViY" userLabel="First Responder" sceneMemberID="firstResponder"/>

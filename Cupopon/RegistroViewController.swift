@@ -10,18 +10,21 @@ import UIKit
 
 class RegistroViewController: UIViewController {
     
-
+    
     @IBOutlet weak var userDniTextField: UITextField!
     
     @IBOutlet weak var userApellidosTextField: UITextField!
     
+    
     @IBOutlet weak var userNombreTextField: UITextField!
+    
     
     @IBOutlet weak var userEmailTextField: UITextField!
     
     @IBOutlet weak var userPasswordTextField: UITextField!
     
     @IBOutlet weak var userPasswordRepeatTextField: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,11 +88,16 @@ class RegistroViewController: UIViewController {
                     return
                 }
                 
-                //var err : NSError?
+                //var err: NSError?
                 
-                var json = NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary
-                if let parseJson = json{
-                    var userId = parseJson["usuarioId"] as? String
+                //err = nil
+                do{
+                var json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary
+                
+                if let parseJSON = json {
+                    
+                    var userId = parseJSON["usuarioId"] as? String
+                    
                     if (userId != nil)
                     {
                         var myAlerta = UIAlertController(title: "Alerta", message: "Registro Exitoso", preferredStyle: UIAlertControllerStyle.Alert);
@@ -99,8 +107,21 @@ class RegistroViewController: UIViewController {
                         myAlerta.addAction(okAction);
                         self.presentViewController(myAlerta, animated : true, completion:nil)
                         
+                    }else{
+                        let errorMessage = parseJSON["message"] as? String
+                        
+                        if( errorMessage != nil)
+                        {
+                            self.desplegarAlertaMensaje(errorMessage!)
+                        }
+                        
                     }
                 }
+                }catch{
+                    //print(error)
+                    print("Existe un erro")
+                }
+                
             }
         
         }).resume()
@@ -108,7 +129,7 @@ class RegistroViewController: UIViewController {
         
     }
     func desplegarAlertaMensaje(userMensaje : String){
-        var myAlert = UIAlertController(title: "Alerta", message: userMensaje, preferredStyle: <#T##UIAlertControllerStyle#>);
+        var myAlert = UIAlertController(title: "Alerta", message: userMensaje, preferredStyle: UIAlertControllerStyle.Alert);
         var okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil);
         myAlert.addAction(okAction);
         
