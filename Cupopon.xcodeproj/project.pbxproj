@@ -14,6 +14,7 @@
 		BA75B1131BC669A400A1F5D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA75B1111BC669A400A1F5D6 /* LaunchScreen.storyboard */; };
 		BA75B11E1BC669A400A1F5D6 /* CupoponTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75B11D1BC669A400A1F5D6 /* CupoponTests.swift */; };
 		BA75B1291BC669A400A1F5D6 /* CupoponUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75B1281BC669A400A1F5D6 /* CupoponUITests.swift */; };
+		BA7D3C1E1BE44DD700622F2C /* PrincipalPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D3C1D1BE44DD700622F2C /* PrincipalPageViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BAA342041BD902FC00052EA2 /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA342031BD902FC00052EA2 /* RegistroViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		BA75B1241BC669A400A1F5D6 /* CupoponUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CupoponUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA75B1281BC669A400A1F5D6 /* CupoponUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupoponUITests.swift; sourceTree = "<group>"; };
 		BA75B12A1BC669A400A1F5D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA7D3C1D1BE44DD700622F2C /* PrincipalPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalPageViewController.swift; sourceTree = "<group>"; };
 		BAA342031BD902FC00052EA2 /* RegistroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 				BA75B1111BC669A400A1F5D6 /* LaunchScreen.storyboard */,
 				BA75B1141BC669A400A1F5D6 /* Info.plist */,
 				BAA342031BD902FC00052EA2 /* RegistroViewController.swift */,
+				BA7D3C1D1BE44DD700622F2C /* PrincipalPageViewController.swift */,
 			);
 			path = Cupopon;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			files = (
 				BA75B10B1BC669A400A1F5D6 /* ViewController.swift in Sources */,
 				BAA342041BD902FC00052EA2 /* RegistroViewController.swift in Sources */,
+				BA7D3C1E1BE44DD700622F2C /* PrincipalPageViewController.swift in Sources */,
 				BA75B1091BC669A400A1F5D6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
