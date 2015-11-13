@@ -71,6 +71,16 @@ class ViewController: UIViewController {
                         
                         if (userId != nil)
                         {
+                            // Provee una interface programatica para intercutar con contenido por defecto del sistema
+                            // setea un especifico valor para una clave en un domino standar de la  aplicacion
+                            NSUserDefaults.standardUserDefaults().setObject(parseJSON["usuarioNombre"], forKey: "usuarioNombre")
+                            NSUserDefaults.standardUserDefaults().setObject(parseJSON["usuarioApellidos"], forKey: "usuarioApellidos")
+                            NSUserDefaults.standardUserDefaults().setObject(parseJSON["usuarioEmail"], forKey: "usuarioEmail")
+                            NSUserDefaults.standardUserDefaults().setObject(parseJSON["usuarioId"], forKey: "usuarioId")
+                            
+                            NSUserDefaults.standardUserDefaults().synchronize()
+                            
+                            
                             let principalPage = self.storyboard?.instantiateViewControllerWithIdentifier("PrincipalPageViewController") as! PrincipalPageViewController
                             // gestiona la transicion com oun navigation controller
                             let principalPageNav = UINavigationController(rootViewController: principalPage)

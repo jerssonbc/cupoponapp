@@ -98,6 +98,9 @@ class RegistroViewController: UIViewController {
                     
                     var userId = parseJSON["usuarioId"] as? String
                     
+                    var hola : String
+                    
+                    
                     if (userId != nil)
                     {
                         var myAlerta = UIAlertController(title: "Alerta", message: "Registro Exitoso", preferredStyle: UIAlertControllerStyle.Alert);
@@ -116,7 +119,7 @@ class RegistroViewController: UIViewController {
                         }
                         
                     }
-                }
+                    }
                 }catch{
                     //print(error)
                     print("Existe un erro")

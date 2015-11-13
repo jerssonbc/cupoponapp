@@ -9,11 +9,17 @@
 import UIKit
 
 class PrincipalPageViewController: UIViewController {
-
+    
+    @IBOutlet weak var usuarioNombreCompletoLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let usuarioNombre = NSUserDefaults.standardUserDefaults().stringForKey("usuarioNombre")
+        let usuarioApellidos = NSUserDefaults.standardUserDefaults().stringForKey("usuarioApellidos")
+        var usuarioNombreCompelto = usuarioNombre! + " " + usuarioApellidos!
+        usuarioNombreCompletoLabel.text = usuarioNombreCompelto
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +27,22 @@ class PrincipalPageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func cerrarSesionTapped(sender: AnyObject) {
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("usuarioNombre")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("usuarioApellidos")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("usuarioEmail")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("usuarioId")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        let loginPage = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
+        let loginInNav = UINavigationController(rootViewController: loginPage)
+        
+        let appDelegate = UIApplication.sharedApplication().delegate
+        
+        appDelegate?.window??.rootViewController=loginInNav
+        
+        
+    }
 
     /*
     // MARK: - Navigation

@@ -16,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let usuarioId = NSUserDefaults.standardUserDefaults().stringForKey("usuarioId")
+        if (usuarioId != nil)
+        {
+            let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let paginaPrincipal = mainStoryBoard.instantiateViewControllerWithIdentifier("PrincipalPageViewController") as! PrincipalPageViewController
+            
+            let principalPageNav = UINavigationController(rootViewController: paginaPrincipal)
+            self.window?.rootViewController = principalPageNav
+        }
         return true
     }
 
