@@ -24,6 +24,8 @@ class CategoriaTableViewController: UITableViewController {
         session = NSURLSession.sharedSession()
         
         categoriaId = getCategoriaIdFromItemTag(self.tabBarItem.tag)
+        print(self.tabBarItem.tag)
+        print(categoriaId)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -111,8 +113,10 @@ class CategoriaTableViewController: UITableViewController {
        
         //cell.textLabel!.text = cupon.producto
         cell.productoName.text = cupon.producto
+        cell.precioConCupon.text = "\(cupon.precioconcupon)"
         cell.productoPrecio.text = "\(cupon.precior)"
         cell.cuponDescuento.text = "\(cupon.descuento) %"
+        cell.cantidadCupon.text = "\(cupon.cantidadCupon)"
         
         
         //cell.imageView!.image = UIImage(named: "Cupon Icon")

@@ -13,16 +13,19 @@ struct Cupon {
     var producto = ""
     var precior = 0.0
     var descuento = 0.0
-    //var preciodesc = 0.0
+    var precioconcupon = 0.0
     var posterCupon : String? = nil
+    var cantidadCupon = 0
     
     init(dictionary : [String:AnyObject]){
         id = dictionary["cup_id"] as! Int
         producto = dictionary["prod_descripcion"] as! String
         precior = dictionary["pro_precio"] as! Double
         descuento = dictionary["cup_descuento"] as! Double
-        //preciodesc = dictionary["preciodesc"] as! Double
+        precioconcupon = dictionary["precio_concupon"] as! Double
         posterCupon = dictionary["pro_ubi_imagen"] as! String
+        cantidadCupon = dictionary["cup_cantidad"] as! Int
+        
         
     }
     static func cuponesFromResults(results : [[String : AnyObject]])->[Cupon]

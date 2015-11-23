@@ -22,6 +22,10 @@ class CuponCell: UITableViewCell {
     
     @IBOutlet var cuponDescuento: UILabel!
     
+    @IBOutlet var precioConCupon: UILabel!
+    
+    
+    @IBOutlet var cantidadCupon: UILabel!
     /*override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
