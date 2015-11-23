@@ -81,12 +81,16 @@ class ViewController: UIViewController {
                             NSUserDefaults.standardUserDefaults().synchronize()
                             
                             
-                            let principalPage = self.storyboard?.instantiateViewControllerWithIdentifier("PrincipalPageViewController") as! PrincipalPageViewController
+                            /*let principalPage = self.storyboard?.instantiateViewControllerWithIdentifier("PrincipalPageViewController") as! PrincipalPageViewController
                             // gestiona la transicion com oun navigation controller
                             let principalPageNav = UINavigationController(rootViewController: principalPage)
                             
                             let appDelegate = UIApplication.sharedApplication().delegate
-                            appDelegate?.window??.rootViewController = principalPageNav
+                            appDelegate?.window??.rootViewController = principalPageNav*/
+                            
+                            let controller = self.storyboard!.instantiateViewControllerWithIdentifier("CuponesTabBarController") as! UITabBarController
+                            self.presentViewController(controller, animated: true, completion: nil)
+                            
                            
                             
                         }else{
@@ -108,7 +112,7 @@ class ViewController: UIViewController {
                     
                 }catch{
                     //print(error)
-                    print("Existe un erro")
+                    print("Existe un error")
                 }
                 
                 
