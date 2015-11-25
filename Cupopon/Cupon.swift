@@ -16,6 +16,13 @@ struct Cupon {
     var precioconcupon = 0.0
     var posterCupon : String? = nil
     var cantidadCupon = 0
+    var empRazonSocial = ""
+    var empGiroNegocio = ""
+    var empTelefono = ""
+    var empWebSite = ""
+    
+    
+    
     
     init(dictionary : [String:AnyObject]){
         id = dictionary["cup_id"] as! Int
@@ -25,6 +32,10 @@ struct Cupon {
         precioconcupon = dictionary["precio_concupon"] as! Double
         posterCupon = dictionary["pro_ubi_imagen"] as! String
         cantidadCupon = dictionary["cup_cantidad"] as! Int
+        empRazonSocial = dictionary["emp_razon_social"] as! String
+        empGiroNegocio = dictionary["emp_giro_negocio"] as! String
+        empTelefono = dictionary["emp_telefono"] as! String
+        empWebSite = dictionary["emp_website"] as! String
         
         
     }

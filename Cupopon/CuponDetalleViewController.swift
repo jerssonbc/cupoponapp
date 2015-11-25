@@ -26,6 +26,7 @@ class CuponDetalleViewController: UIViewController {
     
     @IBOutlet weak var condicionesTextView: UITextView!
     
+    @IBOutlet weak var empresaTextView: UITextView!
     var appDelegate : AppDelegate!
     var session : NSURLSession!
     var cupon : Cupon?
@@ -76,6 +77,9 @@ class CuponDetalleViewController: UIViewController {
             precioConCuponLabel.text = "\(cupon.precioconcupon)"
             precioProductoLabel.text = "\(cupon.precior)"
             cuponesDisponiblesLabel.text = "\(cupon.cantidadCupon)"
+            empresaTextView.text = cupon.empRazonSocial + " : " + cupon.empGiroNegocio + "\n" + "Telefono: " + cupon.empTelefono + "\n" +
+                "Sitio Web: " + cupon.empWebSite 
+            
             
             imageProductoLabel.image = UIImage(named: "Cupon Icon")
             

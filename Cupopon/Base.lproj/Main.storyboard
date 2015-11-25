@@ -494,6 +494,7 @@
                         <outlet property="condicionesTextView" destination="ofY-Bc-9Ga" id="PkL-qK-1En"/>
                         <outlet property="cuponesDisponiblesLabel" destination="DJ2-9u-CKo" id="5lj-zn-wHb"/>
                         <outlet property="descuentoCuponLabel" destination="tuj-vv-0i2" id="Ih4-DF-kZk"/>
+                        <outlet property="empresaTextView" destination="xlf-Ks-qFQ" id="K3Y-dM-ydO"/>
                         <outlet property="imageProductoLabel" destination="atg-h7-Oig" id="d5e-fF-fn4"/>
                         <outlet property="infoCondicionesView" destination="TjX-iB-Wrs" id="3Z8-xa-lV0"/>
                         <outlet property="infoCuponSegmentedControl" destination="fJf-K9-gVZ" id="Ryd-dF-XFg"/>
