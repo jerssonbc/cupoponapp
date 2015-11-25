@@ -423,14 +423,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fJf-K9-gVZ">
-                                <rect key="frame" x="21" y="357" width="288" height="29"/>
-                                <segments>
-                                    <segment title="Del Producto"/>
-                                    <segment title="Condiciones"/>
-                                    <segment title="La Empresa"/>
-                                </segments>
-                            </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Descripcion del cupon" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="G0d-Cc-82k">
                                 <rect key="frame" x="142" y="295" width="166" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -483,11 +475,23 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fJf-K9-gVZ">
+                                <rect key="frame" x="21" y="357" width="288" height="29"/>
+                                <segments>
+                                    <segment title="Del Producto"/>
+                                    <segment title="Condiciones"/>
+                                    <segment title="La Empresa"/>
+                                </segments>
+                                <connections>
+                                    <action selector="infoCuponIndexChanged:" destination="I1b-Ka-5Oa" eventType="valueChanged" id="Xug-l9-Q3r"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="condicionesTextView" destination="ofY-Bc-9Ga" id="PkL-qK-1En"/>
                         <outlet property="cuponesDisponiblesLabel" destination="DJ2-9u-CKo" id="5lj-zn-wHb"/>
                         <outlet property="descuentoCuponLabel" destination="tuj-vv-0i2" id="Ih4-DF-kZk"/>
                         <outlet property="imageProductoLabel" destination="atg-h7-Oig" id="d5e-fF-fn4"/>
