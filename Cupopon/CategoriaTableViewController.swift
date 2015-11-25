@@ -183,6 +183,14 @@ class CategoriaTableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        // ir al detalle del cupon
+        let controller = self.storyboard?.instantiateViewControllerWithIdentifier("CuponDetalleViewController") as! CuponDetalleViewController
+        
+        controller.cupon = cupones[indexPath.row]
+        self.navigationController!.pushViewController(controller, animated: true)
+    }
 
 
     /*

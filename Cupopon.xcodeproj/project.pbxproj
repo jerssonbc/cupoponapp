@@ -19,6 +19,7 @@
 		BAA342041BD902FC00052EA2 /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA342031BD902FC00052EA2 /* RegistroViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BAF5013B1BF864300083B091 /* Cupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF5013A1BF864300083B091 /* Cupon.swift */; settings = {ASSET_TAGS = (); }; };
 		BAF5013F1BF868740083B091 /* CategoriaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF5013E1BF868740083B091 /* CategoriaTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		BAFC27461C05284600507B3D /* CuponDetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFC27451C05284600507B3D /* CuponDetalleViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		BAA342031BD902FC00052EA2 /* RegistroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 		BAF5013A1BF864300083B091 /* Cupon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cupon.swift; sourceTree = "<group>"; };
 		BAF5013E1BF868740083B091 /* CategoriaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriaTableViewController.swift; sourceTree = "<group>"; };
+		BAFC27451C05284600507B3D /* CuponDetalleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuponDetalleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				BA7D3C1D1BE44DD700622F2C /* PrincipalPageViewController.swift */,
 				BAF5013A1BF864300083B091 /* Cupon.swift */,
 				BAF5013E1BF868740083B091 /* CategoriaTableViewController.swift */,
+				BAFC27451C05284600507B3D /* CuponDetalleViewController.swift */,
 			);
 			path = Cupopon;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				BAF5013F1BF868740083B091 /* CategoriaTableViewController.swift in Sources */,
 				BA833E8A1C028059000BF57B /* CuponCell.swift in Sources */,
 				BA75B10B1BC669A400A1F5D6 /* ViewController.swift in Sources */,
+				BAFC27461C05284600507B3D /* CuponDetalleViewController.swift in Sources */,
 				BAA342041BD902FC00052EA2 /* RegistroViewController.swift in Sources */,
 				BA7D3C1E1BE44DD700622F2C /* PrincipalPageViewController.swift in Sources */,
 				BA75B1091BC669A400A1F5D6 /* AppDelegate.swift in Sources */,

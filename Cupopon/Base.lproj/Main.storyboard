@@ -246,7 +246,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3iE-2U-9Ky" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1910" y="-325"/>
+            <point key="canvasLocation" x="2035" y="-342"/>
         </scene>
         <!--CuponesTabBarController-->
         <scene sceneID="u5W-Fh-QFC">
@@ -354,6 +354,156 @@
             </objects>
             <point key="canvasLocation" x="602" y="190"/>
         </scene>
+        <!--Cupon Detalle View Controller-->
+        <scene sceneID="X0J-1p-ZF6">
+            <objects>
+                <viewController storyboardIdentifier="CuponDetalleViewController" id="I1b-Ka-5Oa" customClass="CuponDetalleViewController" customModule="Cupopon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yGH-LU-waX"/>
+                        <viewControllerLayoutGuide type="bottom" id="Prb-Oi-Kml"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vsj-Y9-pPP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo de Producto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PuT-ce-15J">
+                                <rect key="frame" x="21" y="68" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="atg-h7-Oig">
+                                <rect key="frame" x="153" y="102" width="147" height="196"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descuento de este cupon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9HJ-c1-Hwy">
+                                <rect key="frame" x="16" y="92" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="25%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuj-vv-0i2">
+                                <rect key="frame" x="20" y="121" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Precio con codigo de cupon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MA-3k-1hQ">
+                                <rect key="frame" x="16" y="150" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="S/. 90.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUh-co-Gzk">
+                                <rect key="frame" x="20" y="179" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Precio regular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2o-fd-sAb">
+                                <rect key="frame" x="16" y="208" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="S/. 120.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wle-4B-3dQ">
+                                <rect key="frame" x="20" y="236" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cupones disponibles:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DI7-t8-HOK">
+                                <rect key="frame" x="16" y="265" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJ2-9u-CKo">
+                                <rect key="frame" x="114" y="267" width="37" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fJf-K9-gVZ">
+                                <rect key="frame" x="21" y="357" width="288" height="29"/>
+                                <segments>
+                                    <segment title="Del Producto"/>
+                                    <segment title="Condiciones"/>
+                                    <segment title="La Empresa"/>
+                                </segments>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Descripcion del cupon" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="G0d-Cc-82k">
+                                <rect key="frame" x="142" y="295" width="166" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nrY-mT-49p">
+                                <rect key="frame" x="21" y="405" width="288" height="128"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Acerca del la Empresa que creo el producto" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xlf-Ks-qFQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="92"/>
+                                        <accessibility key="accessibilityConfiguration" label="TextoEmpresa"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="ViewEmpresa"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TjX-iB-Wrs">
+                                <rect key="frame" x="21" y="405" width="288" height="128"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Condiciones del Cupon" translatesAutoresizingMaskIntoConstraints="NO" id="ofY-Bc-9Ga">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="82"/>
+                                        <accessibility key="accessibilityConfiguration" label="TextoCondiciones"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="ViewCondiciones"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAi-WS-ZHu">
+                                <rect key="frame" x="21" y="405" width="288" height="128"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Descripcion del Producto" translatesAutoresizingMaskIntoConstraints="NO" id="rXm-Lb-hII">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="84"/>
+                                        <accessibility key="accessibilityConfiguration" label="TextoDelProducto"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.93333333330000001" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="ViewDelProducot"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCj-Kc-r0f">
+                                <rect key="frame" x="16" y="294" width="115" height="32"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="Obtner Cupon">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="cuponesDisponiblesLabel" destination="DJ2-9u-CKo" id="5lj-zn-wHb"/>
+                        <outlet property="descuentoCuponLabel" destination="tuj-vv-0i2" id="Ih4-DF-kZk"/>
+                        <outlet property="imageProductoLabel" destination="atg-h7-Oig" id="d5e-fF-fn4"/>
+                        <outlet property="infoCondicionesView" destination="TjX-iB-Wrs" id="3Z8-xa-lV0"/>
+                        <outlet property="infoCuponSegmentedControl" destination="fJf-K9-gVZ" id="Ryd-dF-XFg"/>
+                        <outlet property="infoEmpresaView" destination="nrY-mT-49p" id="tBu-C5-agj"/>
+                        <outlet property="infoProductoView" destination="fAi-WS-ZHu" id="idS-lW-D0R"/>
+                        <outlet property="nombreProductoLabel" destination="PuT-ce-15J" id="9gl-I5-ccg"/>
+                        <outlet property="precioConCuponLabel" destination="yUh-co-Gzk" id="Yym-aw-aWo"/>
+                        <outlet property="precioProductoLabel" destination="Wle-4B-3dQ" id="MYg-pZ-4nA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHw-M1-noM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="955" y="566"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="gjA-vS-IFx">
             <objects>
@@ -390,7 +540,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sIE-mn-hBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526" y="-285"/>
+            <point key="canvasLocation" x="1483" y="-320"/>
         </scene>
         <!--Cupones Tecnlogicos-->
         <scene sceneID="IGs-pG-oZy">
@@ -494,7 +644,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JxN-Ir-kRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1904" y="327"/>
+            <point key="canvasLocation" x="1860" y="354"/>
         </scene>
         <!--Tecnologia-->
         <scene sceneID="NaQ-3w-MyF">
