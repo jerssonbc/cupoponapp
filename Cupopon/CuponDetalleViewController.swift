@@ -227,6 +227,32 @@ class CuponDetalleViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func obtenerCuponButtonTapped(sender: AnyObject) {
+        let alertaObtenerCupon = UIAlertController(title: "Obtencion de Cupon", message: "Esta seguro que desea obtener un cupon para este producto?", preferredStyle: UIAlertControllerStyle.Alert);
+        
+        /*let okButton = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (okSelected) -&gt; Void in
+            println("Ok Selected")
+        }*/
+        
+        let okButton = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default){
+            (action) in
+            print("Ok Seleccionado")
+             //self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+        let cancelarButton = UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.Default){
+            (action) in
+            print("Cancelar Seleccionado")
+            //self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+        alertaObtenerCupon.addAction(okButton)
+        alertaObtenerCupon.addAction(cancelarButton)
+        self.presentViewController(alertaObtenerCupon, animated: true, completion: nil)
+        
+        
+        
+    }
 
     /*
     // MARK: - Navigation
