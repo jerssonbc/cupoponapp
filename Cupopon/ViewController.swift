@@ -65,6 +65,7 @@ class ViewController: UIViewController {
                 do{
                     var json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary
                     
+                    
                     if let parseJSON = json {
                         
                         var userId = parseJSON["usuarioId"] as? String
