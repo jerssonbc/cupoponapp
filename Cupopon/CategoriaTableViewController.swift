@@ -184,7 +184,7 @@ class CategoriaTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // ir al detalle del cupon
         let controller = self.storyboard?.instantiateViewControllerWithIdentifier("CuponDetalleViewController") as! CuponDetalleViewController
         
