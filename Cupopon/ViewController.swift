@@ -37,7 +37,7 @@ class ViewController: UIViewController {
             return
         }
         // objeto que represetna a una url que puede ser de un recuros remoto
-        let myUrl = NSURL(string: "http://localhost/appcupopon/scripts/ingresoCliente.php");
+        let myUrl = NSURL(string: "http://localhost:8080/appcupopon/scripts/ingresoCliente.php");
         // para cargar una peticion independientemente del protoclo y el esquema
         let request = NSMutableURLRequest(URL: myUrl!);
         

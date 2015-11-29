@@ -42,7 +42,7 @@ class CategoriaTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        let myUrl = NSURL(string: "http://localhost/appcupopon/scripts/listarCupones.php");
+        let myUrl = NSURL(string: "http://localhost:8080/appcupopon/scripts/listarCupones.php");
         
         let request = NSMutableURLRequest(URL: myUrl!);
         
@@ -130,7 +130,7 @@ class CategoriaTableViewController: UITableViewController {
         if let posterPath = cupon.posterCupon {
             // 1. Set the paramaters
             // 2. Construir la URL 
-            let baseURL = NSURL(string: "http://localhost/appcupopon/img/")
+            let baseURL = NSURL(string: "http://localhost:8080/appcupopon/img/")
             let url = baseURL!.URLByAppendingPathComponent(posterPath)
             
             // 3. Configurando la peticion

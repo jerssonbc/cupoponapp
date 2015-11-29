@@ -14,13 +14,14 @@
 		BA75B1131BC669A400A1F5D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA75B1111BC669A400A1F5D6 /* LaunchScreen.storyboard */; };
 		BA75B11E1BC669A400A1F5D6 /* CupoponTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75B11D1BC669A400A1F5D6 /* CupoponTests.swift */; };
 		BA75B1291BC669A400A1F5D6 /* CupoponUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75B1281BC669A400A1F5D6 /* CupoponUITests.swift */; };
-		BA7D3C1E1BE44DD700622F2C /* PrincipalPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D3C1D1BE44DD700622F2C /* PrincipalPageViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		BA833E8A1C028059000BF57B /* CuponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA833E891C028059000BF57B /* CuponCell.swift */; settings = {ASSET_TAGS = (); }; };
-		BAA342041BD902FC00052EA2 /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA342031BD902FC00052EA2 /* RegistroViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		BAF5013B1BF864300083B091 /* Cupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF5013A1BF864300083B091 /* Cupon.swift */; settings = {ASSET_TAGS = (); }; };
-		BAF5013F1BF868740083B091 /* CategoriaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF5013E1BF868740083B091 /* CategoriaTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		BAFC27461C05284600507B3D /* CuponDetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFC27451C05284600507B3D /* CuponDetalleViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		BAFFE7AC1C06096800773245 /* Condicion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFE7AB1C06096800773245 /* Condicion.swift */; settings = {ASSET_TAGS = (); }; };
+		BA7D3C1E1BE44DD700622F2C /* PrincipalPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D3C1D1BE44DD700622F2C /* PrincipalPageViewController.swift */; };
+		BA833E8A1C028059000BF57B /* CuponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA833E891C028059000BF57B /* CuponCell.swift */; };
+		BAA342041BD902FC00052EA2 /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA342031BD902FC00052EA2 /* RegistroViewController.swift */; };
+		BAC6E62F1C0B4C360054A861 /* CuponGeneradoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6E62E1C0B4C360054A861 /* CuponGeneradoViewController.swift */; };
+		BAF5013B1BF864300083B091 /* Cupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF5013A1BF864300083B091 /* Cupon.swift */; };
+		BAF5013F1BF868740083B091 /* CategoriaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF5013E1BF868740083B091 /* CategoriaTableViewController.swift */; };
+		BAFC27461C05284600507B3D /* CuponDetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFC27451C05284600507B3D /* CuponDetalleViewController.swift */; };
+		BAFFE7AC1C06096800773245 /* Condicion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFE7AB1C06096800773245 /* Condicion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		BA7D3C1D1BE44DD700622F2C /* PrincipalPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalPageViewController.swift; sourceTree = "<group>"; };
 		BA833E891C028059000BF57B /* CuponCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuponCell.swift; sourceTree = "<group>"; };
 		BAA342031BD902FC00052EA2 /* RegistroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
+		BAC6E62E1C0B4C360054A861 /* CuponGeneradoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuponGeneradoViewController.swift; sourceTree = "<group>"; };
 		BAF5013A1BF864300083B091 /* Cupon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cupon.swift; sourceTree = "<group>"; };
 		BAF5013E1BF868740083B091 /* CategoriaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriaTableViewController.swift; sourceTree = "<group>"; };
 		BAFC27451C05284600507B3D /* CuponDetalleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuponDetalleViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				BAF5013E1BF868740083B091 /* CategoriaTableViewController.swift */,
 				BAFFE7AB1C06096800773245 /* Condicion.swift */,
 				BAFC27451C05284600507B3D /* CuponDetalleViewController.swift */,
+				BAC6E62E1C0B4C360054A861 /* CuponGeneradoViewController.swift */,
 			);
 			path = Cupopon;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAF5013B1BF864300083B091 /* Cupon.swift in Sources */,
+				BAC6E62F1C0B4C360054A861 /* CuponGeneradoViewController.swift in Sources */,
 				BAF5013F1BF868740083B091 /* CategoriaTableViewController.swift in Sources */,
 				BA833E8A1C028059000BF57B /* CuponCell.swift in Sources */,
 				BA75B10B1BC669A400A1F5D6 /* ViewController.swift in Sources */,
