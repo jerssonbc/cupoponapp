@@ -98,8 +98,6 @@ class RegistroViewController: UIViewController {
                     
                     var userId = parseJSON["usuarioId"] as? String
                     
-                    var hola : String
-                    
                     
                     if (userId != nil)
                     {

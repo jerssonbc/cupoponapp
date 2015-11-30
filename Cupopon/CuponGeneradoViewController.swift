@@ -9,21 +9,27 @@
 import UIKit
 
 class CuponGeneradoViewController: UIViewController {
+    
+    @IBOutlet weak var codigoCuponLabel: UILabel!
+    
+    var codigoCupon :String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let idUser = NSUserDefaults.standardUserDefaults().stringForKey("usuarioId")
+        
 
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
         // Dispose of any resources that can be recreated.
     }
-    
-
+    override func viewWillAppear(animated: Bool) {
+        codigoCuponLabel.text = codigoCupon
+    }
     /*
     // MARK: - Navigation
 

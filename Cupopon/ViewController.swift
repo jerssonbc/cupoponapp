@@ -68,7 +68,7 @@ class ViewController: UIViewController {
                     
                     if let parseJSON = json {
                         
-                        var userId = parseJSON["usuarioId"] as? String
+                        var userId = parseJSON["usuarioId"] as? Int
                         
                         if (userId != nil)
                         {
@@ -78,6 +78,7 @@ class ViewController: UIViewController {
                             NSUserDefaults.standardUserDefaults().setObject(parseJSON["usuarioApellidos"], forKey: "usuarioApellidos")
                             NSUserDefaults.standardUserDefaults().setObject(parseJSON["usuarioEmail"], forKey: "usuarioEmail")
                             NSUserDefaults.standardUserDefaults().setObject(parseJSON["usuarioId"], forKey: "usuarioId")
+                            
                             
                             NSUserDefaults.standardUserDefaults().synchronize()
                             
