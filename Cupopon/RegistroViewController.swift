@@ -61,11 +61,16 @@ class RegistroViewController: UIViewController {
                 desplegarAlertaMensaje("Todos los campos para completar son requeridos")
                 return
         }
+        
+        //Implementando barra de progreso
+        let barraDeProgreso = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        barraDeProgreso.detailsLabelText = "Espere por favor"
+
         // enviar HTTP post
         //http://localhost/appcupopon/scripts/registroCliente.php
       
         // objeto que represetna a una url que puede ser de un recuros remoto
-        let myUrl = NSURL(string: "http://localhost:8080/appcupopon/scripts/registroCliente.php");
+        let myUrl = NSURL(string: "http://localhost:8888/appcupopon/scripts/registroCliente.php");
         // para cargar una peticion independientemente del protoclo y el esquema
         let request = NSMutableURLRequest(URL: myUrl!);
 
@@ -83,6 +88,8 @@ class RegistroViewController: UIViewController {
             
             // lanzar la ejecucion de un bloque en dicha cola en segudno plano
             dispatch_async(dispatch_get_main_queue()){
+                
+            barraDeProgreso.hide(true)
                 if error != nil {
                     self.desplegarAlertaMensaje(error!.localizedDescription)
                     return

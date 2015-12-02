@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         {
             let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let paginaPrincipal = mainStoryBoard.instantiateViewControllerWithIdentifier("PrincipalPageViewController") as! PrincipalPageViewController
+            //let paginaPrincipal = mainStoryBoard.instantiateViewControllerWithIdentifier("ContainerVC") as! ContainerVC
             
             let principalPageNav = UINavigationController(rootViewController: paginaPrincipal)
             self.window?.rootViewController = principalPageNav

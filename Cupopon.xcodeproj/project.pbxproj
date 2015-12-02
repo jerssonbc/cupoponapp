@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63D215C51C0C15B200ADEBDD /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D215C41C0C15B200ADEBDD /* MBProgressHUD.m */; };
+		63D215C71C0C1A1600ADEBDD /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D215C61C0C1A1600ADEBDD /* ContainerVC.swift */; };
+		63D215CB1C0C9C2800ADEBDD /* LeftMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D215CA1C0C9C2800ADEBDD /* LeftMenu.swift */; };
 		BA75B1091BC669A400A1F5D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75B1081BC669A400A1F5D6 /* AppDelegate.swift */; };
 		BA75B10B1BC669A400A1F5D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75B10A1BC669A400A1F5D6 /* ViewController.swift */; };
 		BA75B10E1BC669A400A1F5D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA75B10C1BC669A400A1F5D6 /* Main.storyboard */; };
@@ -42,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63D215C21C0C15AB00ADEBDD /* Cupopon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cupopon-Bridging-Header.h"; sourceTree = "<group>"; };
+		63D215C31C0C15B200ADEBDD /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		63D215C41C0C15B200ADEBDD /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		63D215C61C0C1A1600ADEBDD /* ContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		63D215CA1C0C9C2800ADEBDD /* LeftMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenu.swift; sourceTree = "<group>"; };
 		BA75B1051BC669A400A1F5D6 /* Cupopon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cupopon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA75B1081BC669A400A1F5D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA75B10A1BC669A400A1F5D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +121,8 @@
 		BA75B1071BC669A400A1F5D6 /* Cupopon */ = {
 			isa = PBXGroup;
 			children = (
+				63D215C31C0C15B200ADEBDD /* MBProgressHUD.h */,
+				63D215C41C0C15B200ADEBDD /* MBProgressHUD.m */,
 				BA75B1081BC669A400A1F5D6 /* AppDelegate.swift */,
 				BA75B10A1BC669A400A1F5D6 /* ViewController.swift */,
 				BA75B10C1BC669A400A1F5D6 /* Main.storyboard */,
@@ -127,6 +137,9 @@
 				BAFFE7AB1C06096800773245 /* Condicion.swift */,
 				BAFC27451C05284600507B3D /* CuponDetalleViewController.swift */,
 				BAC6E62E1C0B4C360054A861 /* CuponGeneradoViewController.swift */,
+				63D215C21C0C15AB00ADEBDD /* Cupopon-Bridging-Header.h */,
+				63D215C61C0C1A1600ADEBDD /* ContainerVC.swift */,
+				63D215CA1C0C9C2800ADEBDD /* LeftMenu.swift */,
 			);
 			path = Cupopon;
 			sourceTree = "<group>";
@@ -211,6 +224,7 @@
 		BA75B0FD1BC669A400A1F5D6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = iweb2015;
 				TargetAttributes = {
@@ -279,10 +293,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63D215CB1C0C9C2800ADEBDD /* LeftMenu.swift in Sources */,
+				63D215C71C0C1A1600ADEBDD /* ContainerVC.swift in Sources */,
 				BAF5013B1BF864300083B091 /* Cupon.swift in Sources */,
 				BAC6E62F1C0B4C360054A861 /* CuponGeneradoViewController.swift in Sources */,
 				BAF5013F1BF868740083B091 /* CategoriaTableViewController.swift in Sources */,
 				BA833E8A1C028059000BF57B /* CuponCell.swift in Sources */,
+				63D215C51C0C15B200ADEBDD /* MBProgressHUD.m in Sources */,
 				BA75B10B1BC669A400A1F5D6 /* ViewController.swift in Sources */,
 				BAFC27461C05284600507B3D /* CuponDetalleViewController.swift in Sources */,
 				BAFFE7AC1C06096800773245 /* Condicion.swift in Sources */,
@@ -428,11 +445,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Cupopon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iweb2015.Cupopon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Cupopon/Cupopon-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -440,11 +460,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Cupopon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iweb2015.Cupopon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Cupopon/Cupopon-Bridging-Header.h";
 			};
 			name = Release;
 		};
