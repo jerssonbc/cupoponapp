@@ -36,8 +36,13 @@ class ViewController: UIViewController {
             self.presentViewController(myAlert, animated: true, completion: nil);
             return
         }
+        
+        //Implementando barra de progreso
+        let barraDeProgreso = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        barraDeProgreso.detailsLabelText = "Espere por favor"
+        
         // objeto que represetna a una url que puede ser de un recuros remoto
-        let myUrl = NSURL(string: "http://localhost:8080/appcupopon/scripts/ingresoCliente.php");
+        let myUrl = NSURL(string: "http://localhost:8888/appcupopon/scripts/ingresoCliente.php");
         // para cargar una peticion independientemente del protoclo y el esquema
         let request = NSMutableURLRequest(URL: myUrl!);
         
@@ -45,12 +50,15 @@ class ViewController: UIViewController {
         request.HTTPMethod = "POST";
         
         let postString = "emailUser=\(userEmail!)&passwordUser=\(userPassword!)";
+        
         //encodificacion del cuerpo de la peticion
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding);
         
         NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler:{(data : NSData? , response : NSURLResponse?, error : NSError?) -> Void in
             // lanzar la ejecucion de un bloque en dicha cola en segudno plano
             dispatch_async(dispatch_get_main_queue()){
+                
+                barraDeProgreso.hide(true)
                 
                 if (error != nil)
                 {
@@ -64,8 +72,7 @@ class ViewController: UIViewController {
                 }
                 do{
                     var json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary
-                    
-                    
+
                     if let parseJSON = json {
                         
                         var userId = parseJSON["usuarioId"] as? Int
@@ -83,15 +90,15 @@ class ViewController: UIViewController {
                             NSUserDefaults.standardUserDefaults().synchronize()
                             
                             
-                            /*let principalPage = self.storyboard?.instantiateViewControllerWithIdentifier("PrincipalPageViewController") as! PrincipalPageViewController
+                            let principalPage = self.storyboard?.instantiateViewControllerWithIdentifier("ContainerVC") as! ContainerVC
                             // gestiona la transicion com oun navigation controller
                             let principalPageNav = UINavigationController(rootViewController: principalPage)
                             
                             let appDelegate = UIApplication.sharedApplication().delegate
-                            appDelegate?.window??.rootViewController = principalPageNav*/
+                            appDelegate?.window??.rootViewController = principalPageNav
                             
-                            let controller = self.storyboard!.instantiateViewControllerWithIdentifier("CuponesTabBarController") as! UITabBarController
-                            self.presentViewController(controller, animated: true, completion: nil)
+                            //let controller = self.storyboard!.instantiateViewControllerWithIdentifier("CuponesTabBarController") as! UITabBarController
+                            //self.presentViewController(controller, animated: true, completion: nil)
                             
                            
                             
@@ -113,7 +120,7 @@ class ViewController: UIViewController {
                     
                     
                 }catch{
-                    //print(error)
+                    print(error)
                     print("Existe un error")
                 }
                 

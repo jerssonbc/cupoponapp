@@ -87,7 +87,7 @@ class CuponDetalleViewController: UIViewController {
             // 2. Construir la URL
             // 3. Configurando la peticion
             // 4. Hacer la peticion
-            let myUrl = NSURL(string: "http://localhost:8080/appcupopon/scripts/listarCondiciones.php");
+            let myUrl = NSURL(string: "http://localhost:8888/appcupopon/scripts/listarCondiciones.php");
             
             let request = NSMutableURLRequest(URL: myUrl!);
             request.HTTPMethod = "POST";
@@ -162,7 +162,7 @@ class CuponDetalleViewController: UIViewController {
             if let posterPath = cupon.posterCupon {
                 // 1. Set the paramaters
                 // 2. Construir la URL
-                let baseURL = NSURL(string: "http://localhost:8080/appcupopon/img/")
+                let baseURL = NSURL(string: "http://localhost:8888/appcupopon/img/")
                 let url = baseURL!.URLByAppendingPathComponent(posterPath)
                 
                 // 3. Configurando la peticion
@@ -245,7 +245,7 @@ class CuponDetalleViewController: UIViewController {
             // 2. Construir la URL
             // 3. Configurando la peticion
             // 4. Hacer la peticion
-            let myUrl = NSURL(string: "http://localhost:8080/appcupopon/scripts/obtenerCupon.php");
+            let myUrl = NSURL(string: "http://localhost:8888/appcupopon/scripts/obtenerCupon.php");
             
             let request = NSMutableURLRequest(URL: myUrl!);
             request.HTTPMethod = "POST";
