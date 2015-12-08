@@ -38,11 +38,12 @@ class ViewController: UIViewController {
         }
         
         //Implementando barra de progreso
+        
         let barraDeProgreso = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         barraDeProgreso.detailsLabelText = "Espere por favor"
         
         // objeto que represetna a una url que puede ser de un recuros remoto
-        let myUrl = NSURL(string: "http://localhost:8888/appcupopon/scripts/ingresoCliente.php");
+        let myUrl = NSURL(string: "http://localhost:8080/appcupopon/scripts/ingresoCliente.php");
         // para cargar una peticion independientemente del protoclo y el esquema
         let request = NSMutableURLRequest(URL: myUrl!);
         

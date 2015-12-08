@@ -24,6 +24,8 @@ class CuponDetalleViewController: UIViewController {
     @IBOutlet weak var cuponesDisponiblesLabel: UILabel!
     
     
+    @IBOutlet weak var fechaVencimientoCuponLabel: UILabel!
+    
     @IBOutlet weak var condicionesTextView: UITextView!
     
     @IBOutlet weak var empresaTextView: UITextView!
@@ -76,6 +78,7 @@ class CuponDetalleViewController: UIViewController {
             descuentoCuponLabel.text =  "\(cupon.descuento) %"
             precioConCuponLabel.text = "\(cupon.precioconcupon)"
             precioProductoLabel.text = "\(cupon.precior)"
+            fechaVencimientoCuponLabel.text = "\(cupon.fechaVencimiento)"
             cuponesDisponiblesLabel.text = "\(cupon.cantidadCupon)"
             empresaTextView.text = cupon.empRazonSocial + " : " + cupon.empGiroNegocio + "\n" + "Telefono: " + cupon.empTelefono + "\n" +
                 "Sitio Web: " + cupon.empWebSite 
@@ -87,7 +90,7 @@ class CuponDetalleViewController: UIViewController {
             // 2. Construir la URL
             // 3. Configurando la peticion
             // 4. Hacer la peticion
-            let myUrl = NSURL(string: "http://localhost:8888/appcupopon/scripts/listarCondiciones.php");
+            let myUrl = NSURL(string: "http://localhost:8080/appcupopon/scripts/listarCondiciones.php");
             
             let request = NSMutableURLRequest(URL: myUrl!);
             request.HTTPMethod = "POST";
@@ -162,7 +165,7 @@ class CuponDetalleViewController: UIViewController {
             if let posterPath = cupon.posterCupon {
                 // 1. Set the paramaters
                 // 2. Construir la URL
-                let baseURL = NSURL(string: "http://localhost:8888/appcupopon/img/")
+                let baseURL = NSURL(string: "http://localhost:8080/appcupopon/img/")
                 let url = baseURL!.URLByAppendingPathComponent(posterPath)
                 
                 // 3. Configurando la peticion
@@ -228,7 +231,7 @@ class CuponDetalleViewController: UIViewController {
     }
     
     @IBAction func obtenerCuponButtonTapped(sender: AnyObject) {
-        let alertaObtenerCupon = UIAlertController(title: "Obtencion de Cupon", message: "Esta seguro que desea obtener un cupon para este producto?", preferredStyle: UIAlertControllerStyle.Alert);
+        let alertaObtenerCupon = UIAlertController(title: "Obtencion de Cupon", message: "Esta seguro que desea obtener un cupon para este producto? \n Recuerde leer los terminos y condiciones del Cupon ", preferredStyle: UIAlertControllerStyle.Alert);
         
         /*let okButton = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (okSelected) -&gt; Void in
             println("Ok Selected")
@@ -245,7 +248,12 @@ class CuponDetalleViewController: UIViewController {
             // 2. Construir la URL
             // 3. Configurando la peticion
             // 4. Hacer la peticion
-            let myUrl = NSURL(string: "http://localhost:8888/appcupopon/scripts/obtenerCupon.php");
+            //Implementando barra de progreso
+            
+            let barraDeProgreso = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+            barraDeProgreso.detailsLabelText = "Espere por favor.."
+            
+            let myUrl = NSURL(string: "http://localhost:8080/appcupopon/scripts/obtenerCupon.php");
             
             let request = NSMutableURLRequest(URL: myUrl!);
             request.HTTPMethod = "POST";
@@ -260,6 +268,8 @@ class CuponDetalleViewController: UIViewController {
             request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding);
             
             let task = self.session.dataTaskWithRequest(request){ (data, response, error) in
+                
+                
                 // GUARD: Hubo un error ?
                 guard (error == nil) else {
                     print("Hubo un error con la peticion de generacion de codigo : \(error)")
@@ -305,6 +315,7 @@ class CuponDetalleViewController: UIViewController {
                 /* 6. Use the data! */
                 
                 dispatch_async(dispatch_get_main_queue()) {
+                    barraDeProgreso.hide(true)
                     if(cuponCodigo == nil)
                     {
                         let errorMessage = parsedResult["message"] as? String

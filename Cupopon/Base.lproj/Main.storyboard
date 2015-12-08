@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uHN-i5-7aA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uHN-i5-7aA">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
@@ -470,62 +470,62 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="25%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuj-vv-0i2">
-                                <rect key="frame" x="20" y="121" width="125" height="21"/>
+                                <rect key="frame" x="20" y="114" width="125" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Precio con codigo de cupon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MA-3k-1hQ">
-                                <rect key="frame" x="16" y="150" width="125" height="21"/>
+                                <rect key="frame" x="16" y="127" width="125" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="S/. 90.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUh-co-Gzk">
-                                <rect key="frame" x="20" y="179" width="125" height="21"/>
+                                <rect key="frame" x="20" y="150" width="125" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Precio regular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2o-fd-sAb">
-                                <rect key="frame" x="16" y="208" width="125" height="21"/>
+                                <rect key="frame" x="16" y="169" width="125" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="S/. 120.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wle-4B-3dQ">
-                                <rect key="frame" x="20" y="236" width="125" height="21"/>
+                                <rect key="frame" x="20" y="198" width="125" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cupones disponibles:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DI7-t8-HOK">
-                                <rect key="frame" x="16" y="265" width="100" height="21"/>
+                                <rect key="frame" x="16" y="214" width="100" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJ2-9u-CKo">
-                                <rect key="frame" x="114" y="267" width="37" height="21"/>
+                                <rect key="frame" x="114" y="216" width="37" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Descripcion del cupon" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="G0d-Cc-82k">
-                                <rect key="frame" x="142" y="295" width="166" height="54"/>
+                                <rect key="frame" x="143" y="294" width="166" height="24"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nrY-mT-49p">
-                                <rect key="frame" x="21" y="405" width="288" height="128"/>
+                                <rect key="frame" x="16" y="375" width="288" height="128"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Acerca del la Empresa que creo el producto" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xlf-Ks-qFQ">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="92"/>
@@ -540,7 +540,7 @@
                                 <accessibility key="accessibilityConfiguration" label="ViewEmpresa"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TjX-iB-Wrs">
-                                <rect key="frame" x="21" y="405" width="288" height="128"/>
+                                <rect key="frame" x="16" y="375" width="288" height="128"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Condiciones del Cupon" translatesAutoresizingMaskIntoConstraints="NO" id="ofY-Bc-9Ga">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="82"/>
@@ -555,7 +555,7 @@
                                 <accessibility key="accessibilityConfiguration" label="ViewCondiciones"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAi-WS-ZHu">
-                                <rect key="frame" x="21" y="405" width="288" height="128"/>
+                                <rect key="frame" x="16" y="375" width="288" height="128"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Descripcion del Producto" translatesAutoresizingMaskIntoConstraints="NO" id="rXm-Lb-hII">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="84"/>
@@ -570,7 +570,7 @@
                                 <accessibility key="accessibilityConfiguration" label="ViewDelProducot"/>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fJf-K9-gVZ">
-                                <rect key="frame" x="21" y="357" width="288" height="29"/>
+                                <rect key="frame" x="16" y="341" width="288" height="29"/>
                                 <animations/>
                                 <segments>
                                     <segment title="Del Producto"/>
@@ -593,6 +593,18 @@
                                     <action selector="obtenerCuponButtonTapped:" destination="I1b-Ka-5Oa" eventType="touchUpInside" id="qHm-vr-bzx"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha de terminoi:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ic-lF-byX">
+                                <rect key="frame" x="16" y="243" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="13/12/2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75o-tv-mfW">
+                                <rect key="frame" x="16" y="265" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -603,6 +615,7 @@
                         <outlet property="cuponesDisponiblesLabel" destination="DJ2-9u-CKo" id="5lj-zn-wHb"/>
                         <outlet property="descuentoCuponLabel" destination="tuj-vv-0i2" id="Ih4-DF-kZk"/>
                         <outlet property="empresaTextView" destination="xlf-Ks-qFQ" id="K3Y-dM-ydO"/>
+                        <outlet property="fechaVencimientoCuponLabel" destination="75o-tv-mfW" id="t2P-LL-uyQ"/>
                         <outlet property="imageProductoLabel" destination="atg-h7-Oig" id="d5e-fF-fn4"/>
                         <outlet property="infoCondicionesView" destination="TjX-iB-Wrs" id="3Z8-xa-lV0"/>
                         <outlet property="infoCuponSegmentedControl" destination="fJf-K9-gVZ" id="Ryd-dF-XFg"/>
@@ -615,7 +628,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bHw-M1-noM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2555" y="-314"/>
+            <point key="canvasLocation" x="2263" y="-328"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gjA-vS-IFx">
@@ -779,7 +792,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JxN-Ir-kRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3551" y="374"/>
+            <point key="canvasLocation" x="2067" y="368"/>
         </scene>
         <!--Cupon Generado View Controller-->
         <scene sceneID="MJh-Xm-h7k">
@@ -807,6 +820,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Codigo valido para la compra del producto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfq-PV-ftn">
+                                <rect key="frame" x="20" y="223" width="285" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recuerde revisar sus cupones en el menu Mis Cupones" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHh-LQ-SAR">
+                                <rect key="frame" x="20" y="360" width="280" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -818,7 +843,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21X-88-H6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4035" y="475"/>
+            <point key="canvasLocation" x="2461" y="309"/>
         </scene>
         <!--Tecnologia-->
         <scene sceneID="NaQ-3w-MyF">
@@ -838,7 +863,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRz-bU-dH9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2814" y="374"/>
+            <point key="canvasLocation" x="1483" y="368"/>
         </scene>
         <!--ContainerVC-->
         <scene sceneID="xTj-lY-sBe">
@@ -867,8 +892,8 @@
                                             <segue destination="iUn-QB-kTU" kind="embed" id="cXM-QJ-g6U"/>
                                         </connections>
                                     </containerView>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8aJ-yV-qLq" userLabel="left container">
-                                        <rect key="frame" x="0.0" y="0.0" width="260" height="568"/>
+                                    <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8aJ-yV-qLq" userLabel="left container">
+                                        <rect key="frame" x="23" y="0.0" width="260" height="568"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="260" id="sR7-1P-45Q"/>

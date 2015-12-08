@@ -16,6 +16,7 @@ struct Cupon {
     var precioconcupon = 0.0
     var posterCupon : String? = nil
     var cantidadCupon = 0
+    var fechaVencimiento = ""
     var empRazonSocial = ""
     var empGiroNegocio = ""
     var empTelefono = ""
@@ -32,6 +33,7 @@ struct Cupon {
         precioconcupon = dictionary["precio_concupon"] as! Double
         posterCupon = dictionary["pro_ubi_imagen"] as! String
         cantidadCupon = dictionary["cup_cantidad"] as! Int
+        fechaVencimiento = dictionary["fecha_vencimiento"] as! String
         empRazonSocial = dictionary["emp_razon_social"] as! String
         empGiroNegocio = dictionary["emp_giro_negocio"] as! String
         empTelefono = dictionary["emp_telefono"] as! String
