@@ -53,8 +53,16 @@ class LeftMenu: UIViewController, UITableViewDataSource, UITableViewDelegate {
             let appDelegate = UIApplication.sharedApplication().delegate
             appDelegate?.window??.rootViewController = principalPageNav
             break
-        case 1: break
-        case 2: break
+        case 1:
+            break
+        case 2:
+            let perfilPage = self.storyboard?.instantiateViewControllerWithIdentifier("PerfilViewController") as! PerfilViewController
+            let perfilPageNav = UINavigationController(rootViewController: perfilPage)
+            
+            let appDelegate = UIApplication.sharedApplication().delegate
+            appDelegate?.window??.rootViewController = perfilPageNav
+            break
+          
         case 3:
             NSUserDefaults.standardUserDefaults().removeObjectForKey("usuarioNombre")
             NSUserDefaults.standardUserDefaults().removeObjectForKey("usuarioApellidos")
