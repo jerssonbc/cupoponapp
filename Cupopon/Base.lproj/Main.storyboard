@@ -22,16 +22,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="083-Nc-NUq">
-                                <rect key="frame" x="107" y="303" width="106" height="30"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Registrate"/>
-                                <connections>
-                                    <segue destination="72T-VV-azq" kind="presentation" id="3X1-ky-dJq"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email (usuario):" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ykW-5s-F5x">
                                 <rect key="frame" x="20" y="127" width="280" height="30"/>
                                 <animations/>
@@ -46,6 +36,16 @@
                                 <state key="normal" title="Iniciar Sesion"/>
                                 <connections>
                                     <action selector="ingresarButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="maE-gc-IHe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="083-Nc-NUq">
+                                <rect key="frame" x="107" y="304" width="106" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Registrate"/>
+                                <connections>
+                                    <segue destination="72T-VV-azq" kind="presentation" id="3X1-ky-dJq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -154,7 +154,7 @@
             </objects>
             <point key="canvasLocation" x="1115" y="-715"/>
         </scene>
-        <!--Cupones Destacados-->
+        <!--C.Destacados-->
         <scene sceneID="ABc-cj-JSs">
             <objects>
                 <tableViewController storyboardIdentifier="CategoriaTableViewController1" id="DWB-4M-Ynu" customClass="CategoriaTableViewController" customModule="Cupopon" customModuleProvider="target" sceneMemberID="viewController">
@@ -267,9 +267,9 @@
                             <outlet property="delegate" destination="DWB-4M-Ynu" id="9Wv-eS-PfV"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Destacados" id="8lG-WE-Sfc"/>
-                    <navigationItem key="navigationItem" title="Cupones Destacados" id="B5P-XK-QmC">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="fEj-6A-9fq">
+                    <tabBarItem key="tabBarItem" title="Destacados" image="favourites.png" id="8lG-WE-Sfc"/>
+                    <navigationItem key="navigationItem" title="C.Destacados" id="B5P-XK-QmC">
+                        <barButtonItem key="leftBarButtonItem" image="left_side.png" id="fEj-6A-9fq">
                             <connections>
                                 <action selector="toggleMenu:" destination="DWB-4M-Ynu" id="gi5-5O-UvP"/>
                             </connections>
@@ -394,7 +394,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uo5-zW-DqR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-158" y="122"/>
+            <point key="canvasLocation" x="-594" y="990"/>
         </scene>
         <!--MENU-->
         <scene sceneID="KUh-o1-rcp">
@@ -452,80 +452,80 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo de Producto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PuT-ce-15J">
-                                <rect key="frame" x="21" y="68" width="288" height="21"/>
+                                <rect key="frame" x="21" y="58" width="288" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="atg-h7-Oig">
-                                <rect key="frame" x="153" y="102" width="147" height="196"/>
+                                <rect key="frame" x="153" y="92" width="147" height="196"/>
                                 <animations/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descuento de este cupon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9HJ-c1-Hwy">
-                                <rect key="frame" x="16" y="92" width="125" height="21"/>
+                                <rect key="frame" x="16" y="82" width="125" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="25%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuj-vv-0i2">
-                                <rect key="frame" x="20" y="114" width="125" height="21"/>
+                                <rect key="frame" x="20" y="104" width="125" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Precio con codigo de cupon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MA-3k-1hQ">
-                                <rect key="frame" x="16" y="127" width="125" height="21"/>
+                                <rect key="frame" x="16" y="117" width="125" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="S/. 90.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUh-co-Gzk">
-                                <rect key="frame" x="20" y="150" width="125" height="21"/>
+                                <rect key="frame" x="20" y="140" width="125" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Precio regular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2o-fd-sAb">
-                                <rect key="frame" x="16" y="169" width="125" height="21"/>
+                                <rect key="frame" x="16" y="159" width="125" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="S/. 120.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wle-4B-3dQ">
-                                <rect key="frame" x="20" y="198" width="125" height="21"/>
+                                <rect key="frame" x="20" y="188" width="125" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cupones disponibles:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DI7-t8-HOK">
-                                <rect key="frame" x="16" y="214" width="100" height="21"/>
+                                <rect key="frame" x="16" y="204" width="100" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJ2-9u-CKo">
-                                <rect key="frame" x="114" y="216" width="37" height="21"/>
+                                <rect key="frame" x="114" y="206" width="37" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Descripcion del cupon" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="G0d-Cc-82k">
-                                <rect key="frame" x="143" y="294" width="166" height="24"/>
+                                <rect key="frame" x="143" y="284" width="166" height="24"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nrY-mT-49p">
-                                <rect key="frame" x="16" y="375" width="288" height="128"/>
+                                <rect key="frame" x="16" y="365" width="288" height="128"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Acerca del la Empresa que creo el producto" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xlf-Ks-qFQ">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="92"/>
@@ -540,7 +540,7 @@
                                 <accessibility key="accessibilityConfiguration" label="ViewEmpresa"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TjX-iB-Wrs">
-                                <rect key="frame" x="16" y="375" width="288" height="128"/>
+                                <rect key="frame" x="16" y="365" width="288" height="128"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Condiciones del Cupon" translatesAutoresizingMaskIntoConstraints="NO" id="ofY-Bc-9Ga">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="82"/>
@@ -555,7 +555,7 @@
                                 <accessibility key="accessibilityConfiguration" label="ViewCondiciones"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAi-WS-ZHu">
-                                <rect key="frame" x="16" y="375" width="288" height="128"/>
+                                <rect key="frame" x="16" y="365" width="288" height="128"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Descripcion del Producto" translatesAutoresizingMaskIntoConstraints="NO" id="rXm-Lb-hII">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="84"/>
@@ -570,7 +570,7 @@
                                 <accessibility key="accessibilityConfiguration" label="ViewDelProducot"/>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fJf-K9-gVZ">
-                                <rect key="frame" x="16" y="341" width="288" height="29"/>
+                                <rect key="frame" x="16" y="331" width="288" height="29"/>
                                 <animations/>
                                 <segments>
                                     <segment title="Del Producto"/>
@@ -582,7 +582,7 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCj-Kc-r0f">
-                                <rect key="frame" x="16" y="294" width="115" height="32"/>
+                                <rect key="frame" x="16" y="284" width="115" height="32"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
@@ -593,16 +593,16 @@
                                     <action selector="obtenerCuponButtonTapped:" destination="I1b-Ka-5Oa" eventType="touchUpInside" id="qHm-vr-bzx"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha de terminoi:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ic-lF-byX">
-                                <rect key="frame" x="16" y="243" width="115" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="13/12/2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75o-tv-mfW">
+                                <rect key="frame" x="16" y="255" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="13/12/2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75o-tv-mfW">
-                                <rect key="frame" x="16" y="265" width="125" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha de Termino:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ic-lF-byX">
+                                <rect key="frame" x="16" y="233" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -648,7 +648,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tim-TH-Eda" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-555" y="109"/>
+            <point key="canvasLocation" x="-803" y="257"/>
         </scene>
         <!--Destacados-->
         <scene sceneID="dma-5D-yFP">
@@ -670,7 +670,7 @@
             </objects>
             <point key="canvasLocation" x="1483" y="-320"/>
         </scene>
-        <!--Cupones Tecnlogicos-->
+        <!--C.Tecnologicos-->
         <scene sceneID="IGs-pG-oZy">
             <objects>
                 <tableViewController storyboardIdentifier="CategoriaTableViewController2" id="3Jl-Le-Svu" customClass="CategoriaTableViewController" customModule="Cupopon" customModuleProvider="target" sceneMemberID="viewController">
@@ -780,9 +780,9 @@
                             <outlet property="delegate" destination="3Jl-Le-Svu" id="yg3-zV-mdf"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" tag="1" title="Tecnologia" id="id7-nU-GdA"/>
-                    <navigationItem key="navigationItem" title="Cupones Tecnlogicos" id="dTo-Bf-bVy">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="hRU-SL-Uao">
+                    <tabBarItem key="tabBarItem" tag="1" title="Tecnologia" image="touch-screen.png" id="id7-nU-GdA"/>
+                    <navigationItem key="navigationItem" title="C.Tecnologicos" id="dTo-Bf-bVy">
+                        <barButtonItem key="leftBarButtonItem" image="left_side.png" id="hRU-SL-Uao">
                             <connections>
                                 <action selector="toggleMenu1:" destination="3Jl-Le-Svu" id="kta-zw-B2L"/>
                             </connections>
@@ -794,7 +794,7 @@
             </objects>
             <point key="canvasLocation" x="2067" y="368"/>
         </scene>
-        <!--Cupon Generado View Controller-->
+        <!--Cupon Generado-->
         <scene sceneID="MJh-Xm-h7k">
             <objects>
                 <viewController storyboardIdentifier="CuponGeneradoViewController" id="gE4-sv-4ai" customClass="CuponGeneradoViewController" customModule="Cupopon" customModuleProvider="target" sceneMemberID="viewController">
@@ -807,7 +807,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Codigo de Cupon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWP-EI-uKI">
-                                <rect key="frame" x="83" y="64" width="154" height="21"/>
+                                <rect key="frame" x="83" y="73" width="154" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -823,19 +823,26 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Codigo valido para la compra del producto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfq-PV-ftn">
                                 <rect key="frame" x="20" y="223" width="285" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recuerde revisar sus cupones en el menu Mis Cupones" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHh-LQ-SAR">
                                 <rect key="frame" x="20" y="360" width="280" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Cupon Generado" id="Xvw-wT-Km4">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="6yw-BL-L8S">
+                            <connections>
+                                <action selector="toggleMenu:" destination="gE4-sv-4ai" id="Kzj-Im-vpO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="codigoCuponLabel" destination="boA-bb-ESS" id="Mf7-Pv-9Ok"/>
@@ -843,7 +850,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21X-88-H6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2461" y="309"/>
+            <point key="canvasLocation" x="2850" y="309"/>
         </scene>
         <!--Tecnologia-->
         <scene sceneID="NaQ-3w-MyF">
@@ -963,5 +970,29 @@
             </objects>
             <point key="canvasLocation" x="202" y="655"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Q2q-0o-jXx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fxO-s8-Ipo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zSV-i8-2jT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gE4-sv-4ai" kind="relationship" relationship="rootViewController" id="qdJ-k7-xd7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vfM-jP-gGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2461" y="309"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="favourites.png" width="24" height="24"/>
+        <image name="left_side.png" width="20" height="20"/>
+        <image name="touch-screen.png" width="24" height="24"/>
+    </resources>
 </document>

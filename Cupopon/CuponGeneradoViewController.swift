@@ -12,7 +12,9 @@ class CuponGeneradoViewController: UIViewController {
     
     @IBOutlet weak var codigoCuponLabel: UILabel!
     
+   
     var codigoCupon :String?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +29,24 @@ class CuponGeneradoViewController: UIViewController {
         
         // Dispose of any resources that can be recreated.
     }
+    
     override func viewWillAppear(animated: Bool) {
         codigoCuponLabel.text = codigoCupon
+        
+        
     }
+   
+    @IBAction func toggleMenu(sender: AnyObject) {
+        //SNotificationCenter.defaultCenter().postNotificationName("toggleMenu", object: nil)
+        let principalPage = self.storyboard?.instantiateViewControllerWithIdentifier("ContainerVC") as! ContainerVC
+        // gestiona la transicion com oun navigation controller
+        let principalPageNav = UINavigationController(rootViewController: principalPage)
+        
+        let appDelegate = UIApplication.sharedApplication().delegate
+        appDelegate?.window??.rootViewController = principalPageNav
+    }
+    
+ 
     /*
     // MARK: - Navigation
 

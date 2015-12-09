@@ -325,9 +325,17 @@ class CuponDetalleViewController: UIViewController {
                         
                         self.presentViewController(myAlert, animated: true, completion: nil);
                     }else{
+                        //let controllerCodigo = self.storyboard?.instantiateViewControllerWithIdentifier("CuponGeneradoViewController") as! CuponGeneradoViewController
+                        //controllerCodigo.codigoCupon = cuponCodigo
+                        //self.navigationController?.modalPresentationStyle
+                        //self.navigationController!.pushViewController(controllerCodigo, animated: true)
                         let controllerCodigo = self.storyboard?.instantiateViewControllerWithIdentifier("CuponGeneradoViewController") as! CuponGeneradoViewController
                         controllerCodigo.codigoCupon = cuponCodigo
-                        self.navigationController!.pushViewController(controllerCodigo, animated: true)
+                        // gestiona la transicion com oun navigation controller
+                        let generaCodigoPage = UINavigationController(rootViewController: controllerCodigo)
+                        
+                        let appDelegate = UIApplication.sharedApplication().delegate
+                        appDelegate?.window??.rootViewController = generaCodigoPage
                     }
                     
                 }

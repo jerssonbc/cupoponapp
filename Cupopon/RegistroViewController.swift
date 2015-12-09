@@ -63,8 +63,8 @@ class RegistroViewController: UIViewController {
         }
         
         //Implementando barra de progreso
-        let barraDeProgreso = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        barraDeProgreso.detailsLabelText = "Espere por favor"
+        //let barraDeProgreso = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        //barraDeProgreso.detailsLabelText = "Espere por favor"
 
         // enviar HTTP post
         //http://localhost/appcupopon/scripts/registroCliente.php
@@ -89,8 +89,9 @@ class RegistroViewController: UIViewController {
             // lanzar la ejecucion de un bloque en dicha cola en segudno plano
             dispatch_async(dispatch_get_main_queue()){
                 
-            barraDeProgreso.hide(true)
+            
                 if error != nil {
+                    //barraDeProgreso.hide(true)
                     self.desplegarAlertaMensaje(error!.localizedDescription)
                     return
                 }
@@ -108,26 +109,34 @@ class RegistroViewController: UIViewController {
                     
                     if (userId != nil)
                     {
-                        var myAlerta = UIAlertController(title: "Alerta", message: "Registro Exitoso", preferredStyle: UIAlertControllerStyle.Alert);
+                        
+                        let myAlerta = UIAlertController(title: "Alerta", message: "Registro Exitoso", preferredStyle: UIAlertControllerStyle.Alert);
                         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default){
-                            (action) in self.dismissViewControllerAnimated(true, completion: nil)
+                            (action) in
+                            self.limpiarCampos()
+                            self.dismissViewControllerAnimated(true, completion: nil)
+                            
                         }
+                       
                         myAlerta.addAction(okAction);
+                        //barraDeProgreso.hide(true)
                         self.presentViewController(myAlerta, animated : true, completion:nil)
+                        
                         
                     }else{
                         let errorMessage = parseJSON["message"] as? String
-                        
+                       // barraDeProgreso.hide(true)
                         if( errorMessage != nil)
                         {
                             self.desplegarAlertaMensaje(errorMessage!)
                         }
                         
                     }
-                    }
+                }
+                    
                 }catch{
                     //print(error)
-                    print("Existe un erro")
+                    print("Existe un error")
                 }
                 
             }
@@ -135,6 +144,14 @@ class RegistroViewController: UIViewController {
         }).resume()
         
         
+    }
+    func limpiarCampos(){
+        userDniTextField.text = ""
+        userApellidosTextField.text = ""
+        userNombreTextField.text = ""
+        userEmailTextField.text = ""
+        userPasswordTextField.text = ""
+        userPasswordRepeatTextField.text = ""
     }
     func desplegarAlertaMensaje(userMensaje : String){
         var myAlert = UIAlertController(title: "Alerta", message: userMensaje, preferredStyle: UIAlertControllerStyle.Alert);
