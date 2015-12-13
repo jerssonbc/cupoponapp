@@ -8,14 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITextFieldDelegate  {
     
     @IBOutlet weak var userEmailTextField: UITextField!
     
     @IBOutlet weak var userPasswordTextField: UITextField!
     
+    var appDelegate: AppDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -43,7 +47,9 @@ class ViewController: UIViewController {
         barraDeProgreso.detailsLabelText = "Espere por favor"
         
         // objeto que represetna a una url que puede ser de un recuros remoto
-        let myUrl = NSURL(string: "http://localhost:8080/appcupopon/scripts/ingresoCliente.php");
+        //let myUrl = NSURL(string: "http://192.168.1.41:8080/appcupopon/scripts/ingresoCliente.php");
+        let myUrl =  NSURL(string:Config.baseHtppURLString+"ingresoCliente.php");
+        
         // para cargar una peticion independientemente del protoclo y el esquema
         let request = NSMutableURLRequest(URL: myUrl!);
         
@@ -72,7 +78,10 @@ class ViewController: UIViewController {
                     self.presentViewController(myAlert, animated: true, completion: nil);                    return
                 }
                 do{
+                    print(data)
                     var json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary
+                    
+                    print(json)
 
                     if let parseJSON = json {
                         
@@ -129,6 +138,16 @@ class ViewController: UIViewController {
             }
             
         }).resume()
+    }
+    
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
     }
 }
 

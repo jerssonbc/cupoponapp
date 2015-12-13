@@ -67,10 +67,11 @@ class RegistroViewController: UIViewController {
         //barraDeProgreso.detailsLabelText = "Espere por favor"
 
         // enviar HTTP post
-        //http://localhost/appcupopon/scripts/registroCliente.php
+        //
       
         // objeto que represetna a una url que puede ser de un recuros remoto
-        let myUrl = NSURL(string: "http://localhost:8080/appcupopon/scripts/registroCliente.php");
+        let myUrl = NSURL(string: Config.baseHtppURLString+"registroCliente.php");
+        
         // para cargar una peticion independientemente del protoclo y el esquema
         let request = NSMutableURLRequest(URL: myUrl!);
 
@@ -160,6 +161,15 @@ class RegistroViewController: UIViewController {
         
         self.presentViewController(myAlert, animated: true, completion: nil);
         
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
     }
     
     /*

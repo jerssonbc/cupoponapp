@@ -22,6 +22,15 @@ class PerfilViewController: UIViewController {
     }
     
 
+    @IBAction func toogleMenu(sender: AnyObject) {
+        
+        let principalPage = self.storyboard?.instantiateViewControllerWithIdentifier("ContainerVC") as! ContainerVC
+        // gestiona la transicion com oun navigation controller
+        let principalPageNav = UINavigationController(rootViewController: principalPage)
+        
+        let appDelegate = UIApplication.sharedApplication().delegate
+        appDelegate?.window??.rootViewController = principalPageNav
+    }
     /*
     // MARK: - Navigation
 

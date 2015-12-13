@@ -54,6 +54,11 @@ class LeftMenu: UIViewController, UITableViewDataSource, UITableViewDelegate {
             appDelegate?.window??.rootViewController = principalPageNav
             break
         case 1:
+            let misCuponesPage = self.storyboard?.instantiateViewControllerWithIdentifier("MisCuponesTableViewController") as! MisCuponesTableViewController
+            let misCuponesPageNav = UINavigationController(rootViewController: misCuponesPage)
+            
+            let appDelegate = UIApplication.sharedApplication().delegate
+            appDelegate?.window??.rootViewController = misCuponesPageNav
             break
         case 2:
             let perfilPage = self.storyboard?.instantiateViewControllerWithIdentifier("PerfilViewController") as! PerfilViewController

@@ -10,6 +10,8 @@
 		63D215C51C0C15B200ADEBDD /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D215C41C0C15B200ADEBDD /* MBProgressHUD.m */; };
 		63D215C71C0C1A1600ADEBDD /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D215C61C0C1A1600ADEBDD /* ContainerVC.swift */; };
 		63D215CB1C0C9C2800ADEBDD /* LeftMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D215CA1C0C9C2800ADEBDD /* LeftMenu.swift */; };
+		BA0092581C1A5A120012C19E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0092571C1A5A120012C19E /* Config.swift */; };
+		BA00925A1C1A95250012C19E /* MiCuponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0092591C1A95250012C19E /* MiCuponCell.swift */; };
 		BA095B271C187BFA000DF24C /* connectivity-bar.png in Resources */ = {isa = PBXBuildFile; fileRef = BA095B231C187BFA000DF24C /* connectivity-bar.png */; };
 		BA095B281C187BFA000DF24C /* connectivity-bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA095B241C187BFA000DF24C /* connectivity-bar@2x.png */; };
 		BA095B291C187BFA000DF24C /* left_side.png in Resources */ = {isa = PBXBuildFile; fileRef = BA095B251C187BFA000DF24C /* left_side.png */; };
@@ -17,6 +19,7 @@
 		BA095B2E1C187ECE000DF24C /* favourites.png in Resources */ = {isa = PBXBuildFile; fileRef = BA095B2C1C187ECE000DF24C /* favourites.png */; };
 		BA095B2F1C187ECE000DF24C /* touch-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = BA095B2D1C187ECE000DF24C /* touch-screen.png */; };
 		BA095B311C189342000DF24C /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA095B301C189342000DF24C /* PerfilViewController.swift */; };
+		BA095B331C189CB5000DF24C /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = BA095B321C189CB5000DF24C /* home.png */; };
 		BA75B1091BC669A400A1F5D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75B1081BC669A400A1F5D6 /* AppDelegate.swift */; };
 		BA75B10B1BC669A400A1F5D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75B10A1BC669A400A1F5D6 /* ViewController.swift */; };
 		BA75B10E1BC669A400A1F5D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA75B10C1BC669A400A1F5D6 /* Main.storyboard */; };
@@ -30,6 +33,8 @@
 		BAC6E62F1C0B4C360054A861 /* CuponGeneradoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6E62E1C0B4C360054A861 /* CuponGeneradoViewController.swift */; };
 		BAF5013B1BF864300083B091 /* Cupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF5013A1BF864300083B091 /* Cupon.swift */; };
 		BAF5013F1BF868740083B091 /* CategoriaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF5013E1BF868740083B091 /* CategoriaTableViewController.swift */; };
+		BAFA58331C1916B700340B3E /* MisCuponesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFA58321C1916B700340B3E /* MisCuponesTableViewController.swift */; };
+		BAFA58351C191EC700340B3E /* MiCupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFA58341C191EC700340B3E /* MiCupon.swift */; };
 		BAFC27461C05284600507B3D /* CuponDetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFC27451C05284600507B3D /* CuponDetalleViewController.swift */; };
 		BAFFE7AC1C06096800773245 /* Condicion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFE7AB1C06096800773245 /* Condicion.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +62,8 @@
 		63D215C41C0C15B200ADEBDD /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		63D215C61C0C1A1600ADEBDD /* ContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		63D215CA1C0C9C2800ADEBDD /* LeftMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenu.swift; sourceTree = "<group>"; };
+		BA0092571C1A5A120012C19E /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		BA0092591C1A95250012C19E /* MiCuponCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiCuponCell.swift; sourceTree = "<group>"; };
 		BA095B231C187BFA000DF24C /* connectivity-bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectivity-bar.png"; sourceTree = "<group>"; };
 		BA095B241C187BFA000DF24C /* connectivity-bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectivity-bar@2x.png"; sourceTree = "<group>"; };
 		BA095B251C187BFA000DF24C /* left_side.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_side.png; sourceTree = "<group>"; };
@@ -64,6 +71,7 @@
 		BA095B2C1C187ECE000DF24C /* favourites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favourites.png; sourceTree = "<group>"; };
 		BA095B2D1C187ECE000DF24C /* touch-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "touch-screen.png"; sourceTree = "<group>"; };
 		BA095B301C189342000DF24C /* PerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		BA095B321C189CB5000DF24C /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		BA75B1051BC669A400A1F5D6 /* Cupopon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cupopon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA75B1081BC669A400A1F5D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA75B10A1BC669A400A1F5D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +91,8 @@
 		BAC6E62E1C0B4C360054A861 /* CuponGeneradoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuponGeneradoViewController.swift; sourceTree = "<group>"; };
 		BAF5013A1BF864300083B091 /* Cupon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cupon.swift; sourceTree = "<group>"; };
 		BAF5013E1BF868740083B091 /* CategoriaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriaTableViewController.swift; sourceTree = "<group>"; };
+		BAFA58321C1916B700340B3E /* MisCuponesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MisCuponesTableViewController.swift; sourceTree = "<group>"; };
+		BAFA58341C191EC700340B3E /* MiCupon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiCupon.swift; sourceTree = "<group>"; };
 		BAFC27451C05284600507B3D /* CuponDetalleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuponDetalleViewController.swift; sourceTree = "<group>"; };
 		BAFFE7AB1C06096800773245 /* Condicion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Condicion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +125,7 @@
 		BA095B2B1C187C06000DF24C /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				BA095B321C189CB5000DF24C /* home.png */,
 				BA095B2C1C187ECE000DF24C /* favourites.png */,
 				BA095B2D1C187ECE000DF24C /* touch-screen.png */,
 				BA095B231C187BFA000DF24C /* connectivity-bar.png */,
@@ -169,6 +180,10 @@
 				63D215C61C0C1A1600ADEBDD /* ContainerVC.swift */,
 				63D215CA1C0C9C2800ADEBDD /* LeftMenu.swift */,
 				BA095B301C189342000DF24C /* PerfilViewController.swift */,
+				BAFA58321C1916B700340B3E /* MisCuponesTableViewController.swift */,
+				BAFA58341C191EC700340B3E /* MiCupon.swift */,
+				BA0092571C1A5A120012C19E /* Config.swift */,
+				BA0092591C1A95250012C19E /* MiCuponCell.swift */,
 			);
 			path = Cupopon;
 			sourceTree = "<group>";
@@ -259,6 +274,7 @@
 				TargetAttributes = {
 					BA75B1041BC669A400A1F5D6 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 2Y2CR9X62G;
 					};
 					BA75B1181BC669A400A1F5D6 = {
 						CreatedOnToolsVersion = 7.0;
@@ -301,6 +317,7 @@
 				BA095B281C187BFA000DF24C /* connectivity-bar@2x.png in Resources */,
 				BA75B1131BC669A400A1F5D6 /* LaunchScreen.storyboard in Resources */,
 				BA75B1101BC669A400A1F5D6 /* Assets.xcassets in Resources */,
+				BA095B331C189CB5000DF24C /* home.png in Resources */,
 				BA095B2F1C187ECE000DF24C /* touch-screen.png in Resources */,
 				BA75B10E1BC669A400A1F5D6 /* Main.storyboard in Resources */,
 				BA095B291C187BFA000DF24C /* left_side.png in Resources */,
@@ -330,6 +347,7 @@
 			files = (
 				63D215CB1C0C9C2800ADEBDD /* LeftMenu.swift in Sources */,
 				63D215C71C0C1A1600ADEBDD /* ContainerVC.swift in Sources */,
+				BAFA58331C1916B700340B3E /* MisCuponesTableViewController.swift in Sources */,
 				BAF5013B1BF864300083B091 /* Cupon.swift in Sources */,
 				BAC6E62F1C0B4C360054A861 /* CuponGeneradoViewController.swift in Sources */,
 				BAF5013F1BF868740083B091 /* CategoriaTableViewController.swift in Sources */,
@@ -337,11 +355,14 @@
 				63D215C51C0C15B200ADEBDD /* MBProgressHUD.m in Sources */,
 				BA75B10B1BC669A400A1F5D6 /* ViewController.swift in Sources */,
 				BAFC27461C05284600507B3D /* CuponDetalleViewController.swift in Sources */,
+				BA0092581C1A5A120012C19E /* Config.swift in Sources */,
 				BAFFE7AC1C06096800773245 /* Condicion.swift in Sources */,
 				BAA342041BD902FC00052EA2 /* RegistroViewController.swift in Sources */,
 				BA7D3C1E1BE44DD700622F2C /* PrincipalPageViewController.swift in Sources */,
 				BA095B311C189342000DF24C /* PerfilViewController.swift in Sources */,
+				BA00925A1C1A95250012C19E /* MiCuponCell.swift in Sources */,
 				BA75B1091BC669A400A1F5D6 /* AppDelegate.swift in Sources */,
+				BAFA58351C191EC700340B3E /* MiCupon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,7 +453,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -470,7 +491,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -482,11 +503,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Cupopon/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iweb2015.Cupopon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jerssonbc.Cupopon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Cupopon/Cupopon-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -497,11 +521,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Cupopon/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iweb2015.Cupopon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jerssonbc.Cupopon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Cupopon/Cupopon-Bridging-Header.h";
 			};
 			name = Release;

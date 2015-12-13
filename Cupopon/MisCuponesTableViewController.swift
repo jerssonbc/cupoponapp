@@ -1,34 +1,21 @@
 //
-//  CategoriaTableViewController.swift
+//  MisCuponesTableViewController.swift
 //  Cupopon
 //
-//  Created by Jersson on 11/15/15.
+//  Created by Jersson on 12/9/15.
 //  Copyright © 2015 iweb2015. All rights reserved.
 //
 
 import UIKit
 
-class CategoriaTableViewController: UITableViewController {
-    
+class MisCuponesTableViewController: UITableViewController {
+
     var appDelegate : AppDelegate!
     var session: NSURLSession!
     
-    var cupones : [Cupon] = [Cupon]()
-    var categoriaId : Int? =  nil
+    var miCupones : [MiCupon] = [MiCupon]()
+    var usuarioId : Int? =  nil
     
-    
-   
-    @IBAction func toggleMenu(sender: AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName("toggleMenu", object: nil)
-    
-    }
-    
-    
-    @IBAction func toggleMenu1(sender: AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName("toggleMenu", object: nil)
-    }
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,9 +23,7 @@ class CategoriaTableViewController: UITableViewController {
         
         session = NSURLSession.sharedSession()
         
-        categoriaId = getCategoriaIdFromItemTag(self.tabBarItem.tag)
-        print(self.tabBarItem.tag)
-        print(categoriaId)
+        usuarioId = Int(NSUserDefaults.standardUserDefaults().stringForKey("usuarioId")!)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -46,23 +31,31 @@ class CategoriaTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func toogleMenuHome(sender: AnyObject) {
+        let principalPage = self.storyboard?.instantiateViewControllerWithIdentifier("ContainerVC") as! ContainerVC
+        // gestiona la transicion com oun navigation controller
+        let principalPageNav = UINavigationController(rootViewController: principalPage)
+        
+        let appDelegate = UIApplication.sharedApplication().delegate
+        appDelegate?.window??.rootViewController = principalPageNav
+    }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        let myUrl = NSURL(string: Config.baseHtppURLString+"listarCupones.php");
+        let myUrl = NSURL(string: Config.baseHtppURLString+"misCupones.php");
         
         let request = NSMutableURLRequest(URL: myUrl!);
         
         request.HTTPMethod = "POST";
         
-        let postString = "categoriaId=\(categoriaId!)";
-        
+        let postString = "userId=\(usuarioId!)";
+        print(myUrl)
         //encodificacion del cuerpo de la peticion
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding);
         NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data: NSData?, response : NSURLResponse?, error : NSError?) -> Void in
@@ -91,7 +84,7 @@ class CategoriaTableViewController: UITableViewController {
                 return
             }
             
-            self.cupones = Cupon.cuponesFromResults(results)
+            self.miCupones = MiCupon.misCuponesFromResults(results)
             
             dispatch_async(dispatch_get_main_queue()){
                 self.tableView.reloadData()
@@ -100,7 +93,6 @@ class CategoriaTableViewController: UITableViewController {
             
             
         }).resume()
-        
         
     }
 
@@ -113,38 +105,33 @@ class CategoriaTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return cupones.count
+        return miCupones.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        /* Get cell type */
-        let cellReuseIdentifier = "CuponTableViewCell"
-        let cupon = cupones[indexPath.row]
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseIdentifier) as! CuponCell
+        let cellReuseIdentifier = "MiCuponTableViewCell"
+        let miCupon = miCupones[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseIdentifier) as! MiCuponCell
+
+        // Configure the cell...
         
-        // set cell defaults  
-       
-        //cell.textLabel!.text = cupon.producto
-        cell.productoName.text = cupon.producto
-        cell.precioConCupon.text = "\(cupon.precioconcupon)"
-        cell.productoPrecio.text = "\(cupon.precior)"
-        cell.cuponDescuento.text = "\(cupon.descuento) %"
-        cell.cantidadCupon.text = "\(cupon.cantidadCupon)"
-        
+        cell.nombreProductoLabel.text    = miCupon.producto
+        cell.codigoCupon.text =  miCupon.codigoCupon
+        cell.descuentoCuponLabel.text = "\(miCupon.descuento) %"
+        cell.precioConCuponLabel.text = "\(miCupon.precioconcupon)"
+        cell.precioProductoLabel.text = "\(miCupon.precior)"
+        cell.fechaTerminoCuponLabel.text = miCupon.fechaVencimiento
         
         //cell.imageView!.image = UIImage(named: "Cupon Icon")
         cell.cuponImage.image = UIImage(named: "Cupon Icon")
         //cell.imageView!.contentMode = UIViewContentMode.ScaleAspectFit
         cell.cuponImage.contentMode = UIViewContentMode.ScaleAspectFit
         
-        
-        // TAREA : Obtener la imagen poster, luego poblar el image view
-        
-        if let posterPath = cupon.posterCupon {
+        if let posterPath = miCupon.posterCupon {
             // 1. Set the paramaters
-            // 2. Construir la URL 
+            // 2. Construir la URL
             let baseURL = NSURL(string: Config.baseImageURLString)
             let url = baseURL!.URLByAppendingPathComponent(posterPath)
             
@@ -193,20 +180,9 @@ class CategoriaTableViewController: UITableViewController {
             /* 7. Start the request */
             task.resume()
         }
-
-        // Configure the cell...
-
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // ir al detalle del cupon
-        let controller = self.storyboard?.instantiateViewControllerWithIdentifier("CuponDetalleViewController") as! CuponDetalleViewController
-        
-        controller.cupon = cupones[indexPath.row]
-        self.navigationController!.pushViewController(controller, animated: true)
-    }
-
 
     /*
     // Override to support conditional editing of the table view.
@@ -253,23 +229,4 @@ class CategoriaTableViewController: UITableViewController {
     }
     */
 
-}
-extension CategoriaTableViewController{
-    
-    func getCategoriaIdFromItemTag(itemTag:Int) ->Int{
-        let categorias : [String] = [
-            "Destacados",
-            "Tecnologia"
-        ]
-        let categoriaMap :[String:Int] = [
-        "Destacados" : 1,
-        "Tecnologia" : 2
-        
-        ]
-        
-        return categoriaMap[categorias[itemTag]]!
-    }
-    
-    
-    
 }
