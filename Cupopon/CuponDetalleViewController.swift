@@ -230,6 +230,165 @@ class CuponDetalleViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //funcion para verificar si ya registro la genreacion de un codigo  para dicho cupon
+    func verificaExisteEnLocal( arrayLocal : Array<Int>, codigo:Int)->Int{
+        var existe :Int = 0
+        for var x=0; x < arrayLocal.count ; x++ {
+            if Int(arrayLocal[x]) == codigo {
+                existe = 1
+                break
+            }
+        }
+        return existe
+        
+    }
+    //
+    
+    func generarCupon(user_id:Int, cupon_id:Int)
+    {
+        var cuponCodigo : String?
+        // Inicio generacion de CodigoCupon
+        // consulta para obtener las codiciones del cupon
+        // 2. Construir la URL
+        // 3. Configurando la peticion
+        // 4. Hacer la peticion
+        //Implementando barra de progreso
+        
+        let barraDeProgreso = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        barraDeProgreso.detailsLabelText = "Espere por favor.."
+        
+        let myUrl = NSURL(string: Config.baseHtppURLString+"obtenerCupon.php");
+        
+        let request = NSMutableURLRequest(URL: myUrl!);
+        request.HTTPMethod = "POST";
+        
+        let postString = "cuponId=\(cupon_id)&userId=\(user_id)";
+        
+        print(postString)
+        print(cupon_id)
+        print(user_id)
+        
+        //encodificacion del cuerpo de la peticion
+        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding);
+        
+        let task = self.session.dataTaskWithRequest(request){ (data, response, error) in
+            
+            
+            // GUARD: Hubo un error ?
+            guard (error == nil) else {
+                //Se debe crear un arreglo para almacenar cupones a adquirir o agregar un cupon a un arreglo ya creado...
+                var vExiste:Int = 2
+                var mensaje:String
+                if( NSUserDefaults.standardUserDefaults().objectForKey("porAdquirir") == nil )
+                {
+                    NSUserDefaults.standardUserDefaults().setObject([cupon_id], forKey: "porAdquirir")
+                }
+                else
+                {
+                    var arreglo = NSUserDefaults.standardUserDefaults().objectForKey("porAdquirir") as! Array<Int>
+                    
+                    vExiste = self.verificaExisteEnLocal(arreglo, codigo: cupon_id)
+                    
+                    if(vExiste == 0){
+                        arreglo.append(cupon_id)
+                        
+                        NSUserDefaults.standardUserDefaults().setObject(arreglo, forKey: "porAdquirir")
+                    }else{
+                        
+                    }
+                    
+                    print(NSUserDefaults.standardUserDefaults().objectForKey("porAdquirir"))
+                }
+                
+                if vExiste == 1 {
+                    mensaje = "Ya Solicito la generacion de este cupon, solo es valido uno por persona"
+                }else{
+                    mensaje = "Su peticion de generacion de cupon esta pendiente, sera almacenada localmente, y cuando se conetcte a internet se procesara."
+                }
+                
+                 dispatch_async(dispatch_get_main_queue()) {
+                        print("Hubo un error con la peticion de generacion de codigo : \(error)")
+                     barraDeProgreso.hide(true)
+                    let alert : UIAlertView = UIAlertView(title: "Alerta", message: mensaje , delegate: nil, cancelButtonTitle: "OK")
+                    alert.show()
+                }
+                
+                return
+            }
+            
+            /* GUARD: Did we get a successful 2XX response? */
+            guard let statusCode = (response as? NSHTTPURLResponse)?.statusCode where statusCode >= 200 && statusCode <= 299 else {
+                if let response = response as? NSHTTPURLResponse {
+                    print("Your request returned an invalid response! Status code: \(response.statusCode)!")
+                } else if let response = response {
+                    print("Your request returned an invalid response! Response: \(response)!")
+                } else {
+                    print("Your request returned an invalid response!")
+                }
+                return
+            }
+            /* GUARD: Was there any data returned? */
+            guard let data = data else {
+                print("No data was returned by the request!")
+                return
+            }
+            /* 5. Parse the data */
+            let parsedResult: AnyObject!
+            do {
+                //parsedResult = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
+                parsedResult = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as? NSDictionary
+            } catch {
+                parsedResult = nil
+                
+                print("No se pudo parser la data como JSON: '\(data)'")
+                return
+            }
+            
+            /* GUARD: Did AppCuponesDB return an error? */
+            guard (parsedResult.objectForKey("status_code") == nil) else {
+                print("AppCuonesDB returned an error. See the status_code and status_message in \(parsedResult)")
+                return
+            }
+            
+            cuponCodigo = parsedResult["codigoCupon"] as? String
+            
+            /* 6. Use the data! */
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                barraDeProgreso.hide(true)
+                if(cuponCodigo == nil)
+                {
+                    let errorMessage = parsedResult["message"] as? String
+                    let myAlert = UIAlertController(title: "Alerta", message: errorMessage, preferredStyle: UIAlertControllerStyle.Alert);
+                    let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil);
+                    myAlert.addAction(okAction);
+                    
+                    self.presentViewController(myAlert, animated: true, completion: nil);
+                }else{
+                    //let controllerCodigo = self.storyboard?.instantiateViewControllerWithIdentifier("CuponGeneradoViewController") as! CuponGeneradoViewController
+                    //controllerCodigo.codigoCupon = cuponCodigo
+                    //self.navigationController?.modalPresentationStyle
+                    //self.navigationController!.pushViewController(controllerCodigo, animated: true)
+                    let controllerCodigo = self.storyboard?.instantiateViewControllerWithIdentifier("CuponGeneradoViewController") as! CuponGeneradoViewController
+                    controllerCodigo.codigoCupon = cuponCodigo
+                    // gestiona la transicion com oun navigation controller
+                    let generaCodigoPage = UINavigationController(rootViewController: controllerCodigo)
+                    
+                    let appDelegate = UIApplication.sharedApplication().delegate
+                    appDelegate?.window??.rootViewController = generaCodigoPage
+                }
+                
+            }
+            
+            
+        }
+        /* 7. Start the request */
+        task.resume()
+        //Fin de generacion de CodigoCupon
+        
+    }
+
+    
     @IBAction func obtenerCuponButtonTapped(sender: AnyObject) {
         let alertaObtenerCupon = UIAlertController(title: "Obtencion de Cupon", message: "Esta seguro que desea obtener un cupon para este producto? \n Recuerde leer los terminos y condiciones del Cupon ", preferredStyle: UIAlertControllerStyle.Alert);
         
@@ -241,109 +400,9 @@ class CuponDetalleViewController: UIViewController {
             (action) in
            
             let idUser:Int? = Int(NSUserDefaults.standardUserDefaults().stringForKey("usuarioId")!)
-          
-            var cuponCodigo : String?
-            // Inicio generacion de CodigoCupon
-            // consulta para obtener las codiciones del cupon
-            // 2. Construir la URL
-            // 3. Configurando la peticion
-            // 4. Hacer la peticion
-            //Implementando barra de progreso
+            let cuppon:Int = (self.cupon!.id)
             
-            let barraDeProgreso = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-            barraDeProgreso.detailsLabelText = "Espere por favor.."
-            
-            let myUrl = NSURL(string: Config.baseHtppURLString+"obtenerCupon.php");
-            
-            let request = NSMutableURLRequest(URL: myUrl!);
-            request.HTTPMethod = "POST";
-            
-            let postString = "cuponId=\(self.cupon!.id)&userId=\(idUser!)";
-            
-            print(postString)
-            print(self.cupon?.id)
-            print(idUser)
-            
-            //encodificacion del cuerpo de la peticion
-            request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding);
-            
-            let task = self.session.dataTaskWithRequest(request){ (data, response, error) in
-                
-                
-                // GUARD: Hubo un error ?
-                guard (error == nil) else {
-                    print("Hubo un error con la peticion de generacion de codigo : \(error)")
-                    return
-                }
-                
-                /* GUARD: Did we get a successful 2XX response? */
-                guard let statusCode = (response as? NSHTTPURLResponse)?.statusCode where statusCode >= 200 && statusCode <= 299 else {
-                    if let response = response as? NSHTTPURLResponse {
-                        print("Your request returned an invalid response! Status code: \(response.statusCode)!")
-                    } else if let response = response {
-                        print("Your request returned an invalid response! Response: \(response)!")
-                    } else {
-                        print("Your request returned an invalid response!")
-                    }
-                    return
-                }
-                /* GUARD: Was there any data returned? */
-                guard let data = data else {
-                    print("No data was returned by the request!")
-                    return
-                }
-                /* 5. Parse the data */
-                let parsedResult: AnyObject!
-                do {
-                    //parsedResult = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
-                    parsedResult = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as? NSDictionary
-                } catch {
-                    parsedResult = nil
-                    
-                    print("No se pudo parser la data como JSON: '\(data)'")
-                    return
-                }
-                
-                /* GUARD: Did AppCuponesDB return an error? */
-                guard (parsedResult.objectForKey("status_code") == nil) else {
-                    print("AppCuonesDB returned an error. See the status_code and status_message in \(parsedResult)")
-                    return
-                }
-                
-                cuponCodigo = parsedResult["codigoCupon"] as? String
-                
-                /* 6. Use the data! */
-                
-                dispatch_async(dispatch_get_main_queue()) {
-                    barraDeProgreso.hide(true)
-                    if(cuponCodigo == nil)
-                    {
-                        let errorMessage = parsedResult["message"] as? String
-                        let myAlert = UIAlertController(title: "Alerta", message: errorMessage, preferredStyle: UIAlertControllerStyle.Alert);
-                        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil);
-                        myAlert.addAction(okAction);
-                        
-                        self.presentViewController(myAlert, animated: true, completion: nil);
-                    }else{
-                        //let controllerCodigo = self.storyboard?.instantiateViewControllerWithIdentifier("CuponGeneradoViewController") as! CuponGeneradoViewController
-                        //controllerCodigo.codigoCupon = cuponCodigo
-                        //self.navigationController?.modalPresentationStyle
-                        //self.navigationController!.pushViewController(controllerCodigo, animated: true)
-                        let controllerCodigo = self.storyboard?.instantiateViewControllerWithIdentifier("CuponGeneradoViewController") as! CuponGeneradoViewController
-                        controllerCodigo.codigoCupon = cuponCodigo
-                        // gestiona la transicion com oun navigation controller
-                        let generaCodigoPage = UINavigationController(rootViewController: controllerCodigo)
-                        
-                        let appDelegate = UIApplication.sharedApplication().delegate
-                        appDelegate?.window??.rootViewController = generaCodigoPage
-                    }
-                    
-                }
-                
-                
-            }
-            /* 7. Start the request */
-            task.resume()
+            self.generarCupon(idUser!,cupon_id: cuppon)
             //Fin de generacion de CodigoCupon
             
            

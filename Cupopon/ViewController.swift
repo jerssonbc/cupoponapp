@@ -18,7 +18,13 @@ class ViewController: UIViewController,UITextFieldDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if( NSUserDefaults.standardUserDefaults().stringForKey("usuarioNombre") != nil)
+        {
+            //Si hay una sesion activa, deberia ingresar directo a los cupones
+            let principalPage = self.storyboard?.instantiateViewControllerWithIdentifier("ContainerVC") as! ContainerVC
+            self.presentViewController(principalPage, animated: true, completion: nil)
+            
+        }
         appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -47,7 +53,7 @@ class ViewController: UIViewController,UITextFieldDelegate  {
         barraDeProgreso.detailsLabelText = "Espere por favor"
         
         // objeto que represetna a una url que puede ser de un recuros remoto
-        //let myUrl = NSURL(string: "http://192.168.1.41:8080/appcupopon/scripts/ingresoCliente.php");
+        
         let myUrl =  NSURL(string:Config.baseHtppURLString+"ingresoCliente.php");
         
         // para cargar una peticion independientemente del protoclo y el esquema
@@ -101,14 +107,7 @@ class ViewController: UIViewController,UITextFieldDelegate  {
                             
                             
                             let principalPage = self.storyboard?.instantiateViewControllerWithIdentifier("ContainerVC") as! ContainerVC
-                            // gestiona la transicion com oun navigation controller
-                            let principalPageNav = UINavigationController(rootViewController: principalPage)
-                            
-                            let appDelegate = UIApplication.sharedApplication().delegate
-                            appDelegate?.window??.rootViewController = principalPageNav
-                            
-                            //let controller = self.storyboard!.instantiateViewControllerWithIdentifier("CuponesTabBarController") as! UITabBarController
-                            //self.presentViewController(controller, animated: true, completion: nil)
+                            self.presentViewController(principalPage, animated: true, completion: nil)
                             
                            
                             

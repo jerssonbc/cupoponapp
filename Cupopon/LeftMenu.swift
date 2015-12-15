@@ -46,12 +46,13 @@ class LeftMenu: UIViewController, UITableViewDataSource, UITableViewDelegate {
         switch(indexPath.row)
         {
         case 0:
-            let principalPage = self.storyboard?.instantiateViewControllerWithIdentifier("ContainerVC") as! ContainerVC
+            NSNotificationCenter.defaultCenter().postNotificationName("toggleMenu", object: nil)
+            //let principalPage = self.storyboard?.instantiateViewControllerWithIdentifier("ContainerVC") as! ContainerVC
             // gestiona la transicion com oun navigation controller
-            let principalPageNav = UINavigationController(rootViewController: principalPage)
+            //let principalPageNav = UINavigationController(rootViewController: principalPage)
             
-            let appDelegate = UIApplication.sharedApplication().delegate
-            appDelegate?.window??.rootViewController = principalPageNav
+            //let appDelegate = UIApplication.sharedApplication().delegate
+            //appDelegate?.window??.rootViewController = principalPageNav
             break
         case 1:
             let misCuponesPage = self.storyboard?.instantiateViewControllerWithIdentifier("MisCuponesTableViewController") as! MisCuponesTableViewController
